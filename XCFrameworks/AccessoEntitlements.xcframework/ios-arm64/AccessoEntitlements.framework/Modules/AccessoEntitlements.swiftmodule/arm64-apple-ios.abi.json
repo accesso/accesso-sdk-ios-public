@@ -1,0 +1,3063 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccessoEntitlementsError",
+        "printedName": "AccessoEntitlementsError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "missingRemoteConfig",
+            "printedName": "missingRemoteConfig",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.AccessoEntitlementsError.Type) -> AccessoEntitlements.AccessoEntitlementsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessoEntitlementsError",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsError",
+                    "usr": "s:19AccessoEntitlements0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessoEntitlementsError",
+                        "printedName": "AccessoEntitlements.AccessoEntitlementsError",
+                        "usr": "s:19AccessoEntitlements0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements0aB5ErrorO19missingRemoteConfigyA2CmF",
+            "mangledName": "$s19AccessoEntitlements0aB5ErrorO19missingRemoteConfigyA2CmF",
+            "moduleName": "AccessoEntitlements",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "invalidRemoteConfig",
+            "printedName": "invalidRemoteConfig",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.AccessoEntitlementsError.Type) -> AccessoEntitlements.AccessoEntitlementsError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessoEntitlementsError",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsError",
+                    "usr": "s:19AccessoEntitlements0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessoEntitlementsError",
+                        "printedName": "AccessoEntitlements.AccessoEntitlementsError",
+                        "usr": "s:19AccessoEntitlements0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements0aB5ErrorO19invalidRemoteConfigyA2CmF",
+            "mangledName": "$s19AccessoEntitlements0aB5ErrorO19invalidRemoteConfigyA2CmF",
+            "moduleName": "AccessoEntitlements",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessoEntitlementsError",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsError",
+                    "usr": "s:19AccessoEntitlements0aB5ErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements0aB5ErrorO8rawValueACSgSS_tcfc",
+            "mangledName": "$s19AccessoEntitlements0aB5ErrorO8rawValueACSgSS_tcfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB5ErrorO8rawValueSSvp",
+            "mangledName": "$s19AccessoEntitlements0aB5ErrorO8rawValueSSvp",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB5ErrorO8rawValueSSvg",
+                "mangledName": "$s19AccessoEntitlements0aB5ErrorO8rawValueSSvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19AccessoEntitlements0aB5ErrorO",
+        "mangledName": "$s19AccessoEntitlements0aB5ErrorO",
+        "moduleName": "AccessoEntitlements",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccessoEntitlementsProvider",
+        "printedName": "AccessoEntitlementsProvider",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "entitlementsDataCoordinator",
+            "printedName": "entitlementsDataCoordinator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessoEntitlementsDataCoordinator",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsDataCoordinator",
+                "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB8ProviderC27entitlementsDataCoordinatorAA0abeF0Cvp",
+            "mangledName": "$s19AccessoEntitlements0aB8ProviderC27entitlementsDataCoordinatorAA0abeF0Cvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessoEntitlementsDataCoordinator",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsDataCoordinator",
+                    "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB8ProviderC27entitlementsDataCoordinatorAA0abeF0Cvg",
+                "mangledName": "$s19AccessoEntitlements0aB8ProviderC27entitlementsDataCoordinatorAA0abeF0Cvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessoEntitlementsProvider",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsProvider",
+                "usr": "s:19AccessoEntitlements0aB8ProviderC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB8ProviderC14sharedInstanceACvpZ",
+            "mangledName": "$s19AccessoEntitlements0aB8ProviderC14sharedInstanceACvpZ",
+            "moduleName": "AccessoEntitlements",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessoEntitlementsProvider",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsProvider",
+                    "usr": "s:19AccessoEntitlements0aB8ProviderC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB8ProviderC14sharedInstanceACvgZ",
+                "mangledName": "$s19AccessoEntitlements0aB8ProviderC14sharedInstanceACvgZ",
+                "moduleName": "AccessoEntitlements",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(remoteConfig:logLevel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleDataConfiguration",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                    "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "AccessoCore.AccessoLog.LogLevel",
+                "hasDefaultArg": true,
+                "usr": "s:11AccessoCore0A3LogC0C5LevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements0aB8ProviderC9configure12remoteConfig8logLevely0A4Core29RemoteModuleDataConfigurationVSg_AG0A3LogC0nH0OtKF",
+            "mangledName": "$s19AccessoEntitlements0aB8ProviderC9configure12remoteConfig8logLevely0A4Core29RemoteModuleDataConfigurationVSg_AG0A3LogC0nH0OtKF",
+            "moduleName": "AccessoEntitlements",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "claimEntitlement",
+            "printedName": "claimEntitlement(registrationType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementResult",
+                "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementType",
+                "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements0aB8ProviderC16claimEntitlement16registrationTypeAA05ClaimE6ResultOAA0heG0O_tYaKF",
+            "mangledName": "$s19AccessoEntitlements0aB8ProviderC16claimEntitlement16registrationTypeAA05ClaimE6ResultOAA0heG0O_tYaKF",
+            "moduleName": "AccessoEntitlements",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessoEntitlementsProvider",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsProvider",
+                "usr": "s:19AccessoEntitlements0aB8ProviderC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements0aB8ProviderCACycfc",
+            "mangledName": "$s19AccessoEntitlements0aB8ProviderCACycfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19AccessoEntitlements0aB8ProviderC",
+        "mangledName": "$s19AccessoEntitlements0aB8ProviderC",
+        "moduleName": "AccessoEntitlements",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AccessoEntitlementsProviding",
+            "printedName": "AccessoEntitlementsProviding",
+            "usr": "s:19AccessoEntitlements0aB9ProvidingP",
+            "mangledName": "$s19AccessoEntitlements0aB9ProvidingP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccessoEntitlementsProviding",
+        "printedName": "AccessoEntitlementsProviding",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "claimEntitlement",
+            "printedName": "claimEntitlement(registrationType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementResult",
+                "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementType",
+                "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements0aB9ProvidingP16claimEntitlement16registrationTypeAA05ClaimE6ResultOAA0heG0O_tYaKF",
+            "mangledName": "$s19AccessoEntitlements0aB9ProvidingP16claimEntitlement16registrationTypeAA05ClaimE6ResultOAA0heG0O_tYaKF",
+            "moduleName": "AccessoEntitlements",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoEntitlements.AccessoEntitlementsProviding>",
+            "sugared_genericSig": "<Self where Self : AccessoEntitlements.AccessoEntitlementsProviding>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19AccessoEntitlements0aB9ProvidingP",
+        "mangledName": "$s19AccessoEntitlements0aB9ProvidingP",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccessoEntitlementsDataCoordinator",
+        "printedName": "AccessoEntitlementsDataCoordinator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "remoteConfig",
+            "printedName": "remoteConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleDataConfiguration",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                    "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvp",
+            "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvp",
+            "moduleName": "AccessoEntitlements",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RemoteModuleDataConfiguration",
+                        "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                        "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvg",
+                "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RemoteModuleDataConfiguration",
+                        "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                        "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvs",
+                "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvM",
+                "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC12remoteConfig0A4Core012RemoteModuleC13ConfigurationVSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "remote",
+            "printedName": "remote",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessoEntitlementsRemote",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsRemote",
+                "usr": "s:19AccessoEntitlements0aB6RemoteC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC6remote33_5721B40467C7B1DA72407C55562BEEACLLAA0aB6RemoteCvp",
+            "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC6remote33_5721B40467C7B1DA72407C55562BEEACLLAA0aB6RemoteCvp",
+            "moduleName": "AccessoEntitlements",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Function",
+            "name": "claimEntitlement",
+            "printedName": "claimEntitlement(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementResult",
+                "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementType",
+                "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC16claimEntitlement4withAA05ClaimF6ResultOAA0hF4TypeO_tYaKF",
+            "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC16claimEntitlement4withAA05ClaimF6ResultOAA0hF4TypeO_tYaKF",
+            "moduleName": "AccessoEntitlements",
+            "isOpen": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessoEntitlementsDataCoordinator",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsDataCoordinator",
+                "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements0aB15DataCoordinatorCACycfc",
+            "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorCACycfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19AccessoEntitlements0aB15DataCoordinatorC",
+        "mangledName": "$s19AccessoEntitlements0aB15DataCoordinatorC",
+        "moduleName": "AccessoEntitlements",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClaimEntitlementSource",
+        "printedName": "ClaimEntitlementSource",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "barcode",
+            "printedName": "barcode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvs",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvM",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7barcodeSSSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "user",
+            "printedName": "user",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoEntitlements.EntitlementUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntitlementUser",
+                    "printedName": "AccessoEntitlements.EntitlementUser",
+                    "usr": "s:19AccessoEntitlements15EntitlementUserV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoEntitlements.EntitlementUser?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntitlementUser",
+                        "printedName": "AccessoEntitlements.EntitlementUser",
+                        "usr": "s:19AccessoEntitlements15EntitlementUserV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoEntitlements.EntitlementUser?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntitlementUser",
+                        "printedName": "AccessoEntitlements.EntitlementUser",
+                        "usr": "s:19AccessoEntitlements15EntitlementUserV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvs",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvM",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV4userAA0D4UserVSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "orderEmail",
+            "printedName": "orderEmail",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 2,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvs",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvM",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV10orderEmailSSSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "orderId",
+            "printedName": "orderId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 3,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvs",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvM",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV7orderIdSSSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ticketId",
+            "printedName": "ticketId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 4,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvs",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvM",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV8ticketIdSSSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(user:claimType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementSource",
+                "printedName": "AccessoEntitlements.ClaimEntitlementSource",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoEntitlements.EntitlementUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntitlementUser",
+                    "printedName": "AccessoEntitlements.EntitlementUser",
+                    "usr": "s:19AccessoEntitlements15EntitlementUserV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementType",
+                "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV4user9claimTypeAcA0D4UserVSg_AA0cdH0Otcfc",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV4user9claimTypeAcA0D4UserVSg_AA0cdH0Otcfc",
+            "moduleName": "AccessoEntitlements",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementSource",
+                "printedName": "AccessoEntitlements.ClaimEntitlementSource",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV",
+        "mangledName": "$s19AccessoEntitlements22ClaimEntitlementSourceV",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EntitlementUser",
+        "printedName": "EntitlementUser",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "userId",
+            "printedName": "userId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements15EntitlementUserV6userIdSSvp",
+            "mangledName": "$s19AccessoEntitlements15EntitlementUserV6userIdSSvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV6userIdSSvg",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV6userIdSSvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV6userIdSSvs",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV6userIdSSvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV6userIdSSvM",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV6userIdSSvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "email",
+            "printedName": "email",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements15EntitlementUserV5emailSSvp",
+            "mangledName": "$s19AccessoEntitlements15EntitlementUserV5emailSSvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV5emailSSvg",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV5emailSSvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV5emailSSvs",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV5emailSSvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV5emailSSvM",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV5emailSSvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "externalId",
+            "printedName": "externalId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements15EntitlementUserV10externalIdSSvp",
+            "mangledName": "$s19AccessoEntitlements15EntitlementUserV10externalIdSSvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 2,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV10externalIdSSvg",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV10externalIdSSvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV10externalIdSSvs",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV10externalIdSSvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV10externalIdSSvM",
+                "mangledName": "$s19AccessoEntitlements15EntitlementUserV10externalIdSSvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(userId:email:externalId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EntitlementUser",
+                "printedName": "AccessoEntitlements.EntitlementUser",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements15EntitlementUserV6userId5email08externalF0ACSS_S2Stcfc",
+            "mangledName": "$s19AccessoEntitlements15EntitlementUserV6userId5email08externalF0ACSS_S2Stcfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EntitlementUser",
+                "printedName": "AccessoEntitlements.EntitlementUser",
+                "usr": "s:19AccessoEntitlements15EntitlementUserV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements15EntitlementUserV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s19AccessoEntitlements15EntitlementUserV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements15EntitlementUserV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s19AccessoEntitlements15EntitlementUserV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19AccessoEntitlements15EntitlementUserV",
+        "mangledName": "$s19AccessoEntitlements15EntitlementUserV",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClaimEntitlementType",
+        "printedName": "ClaimEntitlementType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "barcode",
+            "printedName": "barcode",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.ClaimEntitlementType.Type) -> (Swift.String) -> AccessoEntitlements.ClaimEntitlementType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> AccessoEntitlements.ClaimEntitlementType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementType",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                        "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(code: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.ClaimEntitlementType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementType",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                        "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO7barcodeyACSS_tcACmF",
+            "mangledName": "$s19AccessoEntitlements20ClaimEntitlementTypeO7barcodeyACSS_tcACmF",
+            "moduleName": "AccessoEntitlements"
+          },
+          {
+            "kind": "Var",
+            "name": "orderId",
+            "printedName": "orderId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.ClaimEntitlementType.Type) -> (Swift.String, Swift.String) -> AccessoEntitlements.ClaimEntitlementType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> AccessoEntitlements.ClaimEntitlementType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementType",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                        "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(id: Swift.String, orderEmail: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.ClaimEntitlementType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementType",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementType",
+                        "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO7orderIdyACSS_SStcACmF",
+            "mangledName": "$s19AccessoEntitlements20ClaimEntitlementTypeO7orderIdyACSS_SStcACmF",
+            "moduleName": "AccessoEntitlements"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19AccessoEntitlements20ClaimEntitlementTypeO",
+        "mangledName": "$s19AccessoEntitlements20ClaimEntitlementTypeO",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClaimEntitlementStatus",
+        "printedName": "ClaimEntitlementStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "processingMode",
+            "printedName": "processingMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV14processingModeSSvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV14processingModeSSvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV14processingModeSSvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV14processingModeSSvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV7successSbvp",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV7successSbvp",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV7successSbvg",
+                "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV7successSbvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(processingMode:success:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementStatus",
+                "printedName": "AccessoEntitlements.ClaimEntitlementStatus",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV14processingMode7successACSS_Sbtcfc",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV14processingMode7successACSS_Sbtcfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementStatus",
+                "printedName": "AccessoEntitlements.ClaimEntitlementStatus",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AccessoEntitlements",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV",
+        "mangledName": "$s19AccessoEntitlements22ClaimEntitlementStatusV",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClaimEntitlementResult",
+        "printedName": "ClaimEntitlementResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "claimed",
+            "printedName": "claimed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.ClaimEntitlementResult.Type) -> (AccessoEntitlements.ClaimEntitlementStatus) -> AccessoEntitlements.ClaimEntitlementResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AccessoEntitlements.ClaimEntitlementStatus) -> AccessoEntitlements.ClaimEntitlementResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementResult",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                        "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(status: AccessoEntitlements.ClaimEntitlementStatus)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ClaimEntitlementStatus",
+                            "printedName": "AccessoEntitlements.ClaimEntitlementStatus",
+                            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.ClaimEntitlementResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementResult",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                        "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO7claimedyAcA0cD6StatusV_tcACmF",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementResultO7claimedyAcA0cD6StatusV_tcACmF",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "claimedButProcessing",
+            "printedName": "claimedButProcessing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.ClaimEntitlementResult.Type) -> (AccessoEntitlements.ClaimEntitlementStatus) -> AccessoEntitlements.ClaimEntitlementResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AccessoEntitlements.ClaimEntitlementStatus) -> AccessoEntitlements.ClaimEntitlementResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementResult",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                        "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(status: AccessoEntitlements.ClaimEntitlementStatus)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ClaimEntitlementStatus",
+                            "printedName": "AccessoEntitlements.ClaimEntitlementStatus",
+                            "usr": "s:19AccessoEntitlements22ClaimEntitlementStatusV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.ClaimEntitlementResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementResult",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                        "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO20claimedButProcessingyAcA0cD6StatusV_tcACmF",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementResultO20claimedButProcessingyAcA0cD6StatusV_tcACmF",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notFound",
+            "printedName": "notFound",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.ClaimEntitlementResult.Type) -> AccessoEntitlements.ClaimEntitlementResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ClaimEntitlementResult",
+                    "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                    "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.ClaimEntitlementResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClaimEntitlementResult",
+                        "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                        "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO8notFoundyA2CmF",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementResultO8notFoundyA2CmF",
+            "moduleName": "AccessoEntitlements",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementResult",
+                "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementResult",
+                "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19AccessoEntitlements22ClaimEntitlementResultO2eeoiySbAC_ACtFZ",
+            "moduleName": "AccessoEntitlements",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO",
+        "mangledName": "$s19AccessoEntitlements22ClaimEntitlementResultO",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccessoEntitlementsEndpoints",
+        "printedName": "AccessoEntitlementsEndpoints",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "getEntitlements",
+            "printedName": "getEntitlements",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.AccessoEntitlementsEndpoints.Type) -> AccessoEntitlements.AccessoEntitlementsEndpoints",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessoEntitlementsEndpoints",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsEndpoints",
+                    "usr": "s:19AccessoEntitlements0aB9EndpointsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsEndpoints.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessoEntitlementsEndpoints",
+                        "printedName": "AccessoEntitlements.AccessoEntitlementsEndpoints",
+                        "usr": "s:19AccessoEntitlements0aB9EndpointsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements0aB9EndpointsO03getB0yA2CmF",
+            "mangledName": "$s19AccessoEntitlements0aB9EndpointsO03getB0yA2CmF",
+            "moduleName": "AccessoEntitlements",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "claimEntitlements",
+            "printedName": "claimEntitlements",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoEntitlements.AccessoEntitlementsEndpoints.Type) -> (Swift.String) -> AccessoEntitlements.AccessoEntitlementsEndpoints",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> AccessoEntitlements.AccessoEntitlementsEndpoints",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessoEntitlementsEndpoints",
+                        "printedName": "AccessoEntitlements.AccessoEntitlementsEndpoints",
+                        "usr": "s:19AccessoEntitlements0aB9EndpointsO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(systemOfRecordId: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoEntitlements.AccessoEntitlementsEndpoints.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessoEntitlementsEndpoints",
+                        "printedName": "AccessoEntitlements.AccessoEntitlementsEndpoints",
+                        "usr": "s:19AccessoEntitlements0aB9EndpointsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19AccessoEntitlements0aB9EndpointsO05claimB0yACSS_tcACmF",
+            "mangledName": "$s19AccessoEntitlements0aB9EndpointsO05claimB0yACSS_tcACmF",
+            "moduleName": "AccessoEntitlements",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB9EndpointsO4pathSSvp",
+            "mangledName": "$s19AccessoEntitlements0aB9EndpointsO4pathSSvp",
+            "moduleName": "AccessoEntitlements",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB9EndpointsO4pathSSvg",
+                "mangledName": "$s19AccessoEntitlements0aB9EndpointsO4pathSSvg",
+                "moduleName": "AccessoEntitlements",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "method",
+            "printedName": "method",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB9EndpointsO6methodSSvp",
+            "mangledName": "$s19AccessoEntitlements0aB9EndpointsO6methodSSvp",
+            "moduleName": "AccessoEntitlements",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB9EndpointsO6methodSSvg",
+                "mangledName": "$s19AccessoEntitlements0aB9EndpointsO6methodSSvg",
+                "moduleName": "AccessoEntitlements",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19AccessoEntitlements0aB9EndpointsO",
+        "mangledName": "$s19AccessoEntitlements0aB9EndpointsO",
+        "moduleName": "AccessoEntitlements",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AccessoEndpoint",
+            "printedName": "AccessoEndpoint",
+            "usr": "s:11AccessoCore0A8EndpointP",
+            "mangledName": "$s11AccessoCore0A8EndpointP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoEntitlements"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccessoEntitlementsRemote",
+        "printedName": "AccessoEntitlementsRemote",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "remoteConfig",
+            "printedName": "remoteConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleDataConfiguration",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                    "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvp",
+            "mangledName": "$s19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvp",
+            "moduleName": "AccessoEntitlements",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RemoteModuleDataConfiguration",
+                        "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                        "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvg",
+                "mangledName": "$s19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvg",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RemoteModuleDataConfiguration",
+                        "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                        "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvs",
+                "mangledName": "$s19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvs",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvM",
+                "mangledName": "$s19AccessoEntitlements0aB6RemoteC12remoteConfig0A4Core0C23ModuleDataConfigurationVSgvM",
+                "moduleName": "AccessoEntitlements",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkSession",
+            "printedName": "networkSession",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkSessionProvider",
+                "printedName": "AccessoCore.NetworkSessionProvider",
+                "usr": "s:11AccessoCore22NetworkSessionProviderP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19AccessoEntitlements0aB6RemoteC14networkSession33_CD23E219869394ED307AE1B381DB2F5CLL0A4Core07NetworkE8Provider_pvp",
+            "mangledName": "$s19AccessoEntitlements0aB6RemoteC14networkSession33_CD23E219869394ED307AE1B381DB2F5CLL0A4Core07NetworkE8Provider_pvp",
+            "moduleName": "AccessoEntitlements",
+            "isInternal": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(remoteConfig:networkSession:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessoEntitlementsRemote",
+                "printedName": "AccessoEntitlements.AccessoEntitlementsRemote",
+                "usr": "s:19AccessoEntitlements0aB6RemoteC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoCore.RemoteModuleDataConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleDataConfiguration",
+                    "printedName": "AccessoCore.RemoteModuleDataConfiguration",
+                    "usr": "s:11AccessoCore29RemoteModuleDataConfigurationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkSessionProvider",
+                "printedName": "AccessoCore.NetworkSessionProvider",
+                "hasDefaultArg": true,
+                "usr": "s:11AccessoCore22NetworkSessionProviderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19AccessoEntitlements0aB6RemoteC12remoteConfig14networkSessionAC0A4Core0C23ModuleDataConfigurationVSg_AF07NetworkG8Provider_ptcfc",
+            "mangledName": "$s19AccessoEntitlements0aB6RemoteC12remoteConfig14networkSessionAC0A4Core0C23ModuleDataConfigurationVSg_AF07NetworkG8Provider_ptcfc",
+            "moduleName": "AccessoEntitlements",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "claimEntitlement",
+            "printedName": "claimEntitlement(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementResult",
+                "printedName": "AccessoEntitlements.ClaimEntitlementResult",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClaimEntitlementSource",
+                "printedName": "AccessoEntitlements.ClaimEntitlementSource",
+                "usr": "s:19AccessoEntitlements22ClaimEntitlementSourceV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19AccessoEntitlements0aB6RemoteC16claimEntitlement4withAA05ClaimE6ResultOAA0gE6SourceV_tYaKF",
+            "mangledName": "$s19AccessoEntitlements0aB6RemoteC16claimEntitlement4withAA05ClaimE6ResultOAA0gE6SourceV_tYaKF",
+            "moduleName": "AccessoEntitlements",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19AccessoEntitlements0aB6RemoteC",
+        "mangledName": "$s19AccessoEntitlements0aB6RemoteC",
+        "moduleName": "AccessoEntitlements",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/AccessoEntitlementsProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 188,
+      "length": 60,
+      "value": "\"No Remote Config set for AccessoExperiencePromoter module.\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/AccessoEntitlementsProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 280,
+      "length": 87,
+      "value": "\"You must supply a valid Remote Config in order to use the AccessoEntitlements module.\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/AccessoEntitlementsProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 188,
+      "length": 60,
+      "value": "\"No Remote Config set for AccessoExperiencePromoter module.\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/AccessoEntitlementsProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 280,
+      "length": 87,
+      "value": "\"You must supply a valid Remote Config in order to use the AccessoEntitlements module.\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/AccessoEntitlementsProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 895,
+      "length": 58,
+      "value": "\"Error: '\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/AccessoEntitlementsProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 951,
+      "length": 3,
+      "value": "\"'\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Models\/ClaimEntitlementStatus.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1101,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Models\/ClaimEntitlementStatus.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1192,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Models\/ClaimEntitlementStatus.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1253,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Models\/ClaimEntitlementStatus.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1294,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 10,
+      "value": "\"Passport\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 366,
+      "length": 18,
+      "value": "\"\/v3\/entitlements\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 459,
+      "length": 51,
+      "value": "\"\/v3\/entitlements\/\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 496,
+      "length": 1,
+      "value": "\"\/registration\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 629,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 687,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1174,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1334,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1404,
+      "length": 3,
+      "value": "202"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1760,
+      "length": 3,
+      "value": "404"
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "StringLiteral",
+      "offset": 1801,
+      "length": 39,
+      "value": "\"Entitlement Not Found with: \""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "StringLiteral",
+      "offset": 1839,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "StringLiteral",
+      "offset": 2104,
+      "length": 39,
+      "value": "\"Entitlement Not Found with: \""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "StringLiteral",
+      "offset": 2142,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "StringLiteral",
+      "offset": 2526,
+      "length": 26,
+      "value": "\"Bad Response for: \""
+    },
+    {
+      "filePath": "\/Users\/markmccorkle\/Repositories\/accesso\/accesso-sdk-ios\/accesso-entitlements\/AccessoEntitlements\/Source\/Data\/Remote\/AccessoEntitlementsRemote.swift",
+      "kind": "StringLiteral",
+      "offset": 2551,
+      "length": 2,
+      "value": "\"\""
+    }
+  ]
+}

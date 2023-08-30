@@ -1,0 +1,239 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.106 clang-1500.0.40.1)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreLocation
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+@_hasMissingDesignatedInitializers public class AccessoCoreProvider {
+  public static let sharedInstance: AccessoCore.AccessoCoreProvider
+  public var remoteConfig: AccessoCore.RemoteModuleDataConfiguration?
+  public func configure(using remoteConfig: AccessoCore.RemoteModuleDataConfiguration?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AccessoIdentity {
+  public static let sharedInstance: AccessoCore.AccessoIdentity
+  public var remoteConfig: AccessoCore.RemoteModuleDataConfiguration? {
+    get
+  }
+  public func configure(using remoteConfig: AccessoCore.RemoteModuleDataConfiguration?)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAnonymousToken() async throws -> AccessoCore.AccessoAnonymousToken
+  #endif
+  @objc deinit
+}
+public enum AccessoIdentityError : Swift.Error {
+  case anonymousTokenError
+  public static func == (a: AccessoCore.AccessoIdentityError, b: AccessoCore.AccessoIdentityError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct AccessoAnonymousToken : Swift.Codable {
+  public let accessToken: Swift.String
+  public let tokenType: Swift.String?
+  public let refreshToken: Swift.String
+  public let expiresIn: Foundation.TimeInterval
+  public let scope: Swift.String?
+  public let accountId: Swift.String?
+  public let userType: Swift.String?
+  public let venueId: Swift.String?
+  public let appUserId: Swift.String?
+  public let organization: Swift.String?
+  public let amr: [AccessoCore.Amr]?
+  public let iss: Swift.String?
+  public let phoneNumber: Swift.String?
+  public let source: Swift.String?
+  public let iat: Swift.Int
+  public let email: Swift.String?
+  public let uuid: Swift.String?
+  public let jti: Swift.String?
+  public let appId: Swift.String?
+  public var accessTokenExpirationDate: Foundation.Date {
+    get
+  }
+  public var refreshTokenExpirationDate: Foundation.Date? {
+    get
+  }
+  public init(accessToken: Swift.String, tokenType: Swift.String? = nil, refreshToken: Swift.String, expiresIn: Foundation.TimeInterval, scope: Swift.String? = nil, accountId: Swift.String? = nil, userType: Swift.String? = nil, venueId: Swift.String? = nil, appUserId: Swift.String? = nil, organization: Swift.String? = nil, amr: [AccessoCore.Amr]? = nil, iss: Swift.String? = nil, phoneNumber: Swift.String? = nil, source: Swift.String? = nil, iat: Swift.Int, email: Swift.String? = nil, uuid: Swift.String? = nil, jti: Swift.String? = nil, appId: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Amr : Swift.Codable {
+  public let authority: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers open class AccessoLog : ObjectiveC.NSObject {
+  public enum Subsystem : Swift.String {
+    case hostApp
+    case core
+    case experiencePromoter
+    case entitlements
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Category : Swift.String {
+    case applevel
+    case ui
+    case network
+    case database
+    case startup
+    case initialize
+    case shutdown
+    case parsing
+    case file
+    case config
+    case location
+    case analytics
+    case user
+    case cache
+    case barcode
+    case identity
+    case uiTest
+    case unitTest
+    case moduleApp
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AccessLevel : Swift.String {
+    case `public`
+    case `private`
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum LogLevel : Swift.Int {
+    case debug
+    case info
+    case warning
+    case error
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var currentLogLevel: AccessoCore.AccessoLog.LogLevel
+  @discardableResult
+  public class func Log(_ message: Swift.String, subsystem: AccessoCore.AccessoLog.Subsystem = AccessoLog.Subsystem.hostApp, category: AccessoCore.AccessoLog.Category = AccessoLog.Category.applevel, access: AccessoCore.AccessoLog.AccessLevel = AccessoLog.AccessLevel.public, filename: Swift.String = #file, line: Swift.Int = #line, funcname: Swift.String = #function, level: AccessoCore.AccessoLog.LogLevel = AccessoLog.LogLevel.info) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ApiRouter {
+  var method: Swift.String { get }
+  var methodUri: Swift.String { get }
+  func urlString(for config: AccessoCore.RemoteModuleDataConfiguration) -> Swift.String
+}
+extension AccessoCore.ApiRouter {
+  public func urlString(for config: AccessoCore.RemoteModuleDataConfiguration) -> Swift.String
+}
+public protocol AccessoEndpoint {
+  var baseURL: Swift.String { get }
+  var path: Swift.String { get }
+}
+extension AccessoCore.AccessoEndpoint {
+  public var baseURL: Swift.String {
+    get
+  }
+  public var url: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class AccessoNetworking {
+  public static let sharedInstance: AccessoCore.AccessoNetworking
+  public var remoteConfig: AccessoCore.RemoteModuleDataConfiguration? {
+    get
+  }
+  public func configure(using remoteConfig: AccessoCore.RemoteModuleDataConfiguration?)
+  @objc deinit
+}
+public enum AccessoNetworkingConstants {
+  public enum InvalidState {
+    public static let code: Swift.Int
+    public static let domain: Swift.String
+    public static let noDataMessage: Swift.String
+  }
+}
+public enum AccessoNetworkingError : Swift.Error {
+  case connectionFailed
+  case requestTimeout
+  case serverError(statusCode: Swift.Int)
+  case unknownError
+}
+public enum HTTPMethod : Swift.String {
+  case CONNECT
+  case DELETE
+  case GET
+  case HEAD
+  case OPTIONS
+  case PATCH
+  case POST
+  case PUT
+  case TRACE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct RemoteModuleDataConfiguration : Swift.Decodable {
+  public var baseURL: Swift.String
+  public var appID: Swift.String?
+  public var identityUsername: Swift.String?
+  public var identityPassword: Swift.String?
+  public var username: Swift.String?
+  public var password: Swift.String?
+  public var preferredLanguage: Swift.String
+  public var venueId: Swift.String?
+  public var customerId: Swift.String?
+  public var appUserID: Swift.String?
+  public var appVersion: Swift.String?
+  public static func config(bundle: Foundation.Bundle = Bundle.main, resource: Swift.String = "Accesso-Info") -> AccessoCore.RemoteModuleDataConfiguration?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class NetworkSession : AccessoCore.NetworkSessionProvider {
+  public init(session: Foundation.URLSession = URLSession(configuration: .ephemeral))
+  #if compiler(>=5.3) && $AsyncAwait
+  public func performRequest(url: Swift.String, method: AccessoCore.HTTPMethod, queryItems: [Foundation.URLQueryItem]? = nil, body: (any Swift.Encodable)?, useIdentityAuth: Swift.Bool = false) async throws -> (Foundation.Data, Foundation.HTTPURLResponse)
+  #endif
+  @objc deinit
+}
+public protocol NetworkSessionProvider {
+  #if compiler(>=5.3) && $AsyncAwait
+  func performRequest(url: Swift.String, method: AccessoCore.HTTPMethod, queryItems: [Foundation.URLQueryItem]?, body: (any Swift.Encodable)?, useIdentityAuth: Swift.Bool) async throws -> (Foundation.Data, Foundation.HTTPURLResponse)
+  #endif
+}
+extension AccessoCore.AccessoIdentityError : Swift.Equatable {}
+extension AccessoCore.AccessoIdentityError : Swift.Hashable {}
+extension AccessoCore.AccessoLog.Subsystem : Swift.Equatable {}
+extension AccessoCore.AccessoLog.Subsystem : Swift.Hashable {}
+extension AccessoCore.AccessoLog.Subsystem : Swift.RawRepresentable {}
+extension AccessoCore.AccessoLog.Category : Swift.Equatable {}
+extension AccessoCore.AccessoLog.Category : Swift.Hashable {}
+extension AccessoCore.AccessoLog.Category : Swift.RawRepresentable {}
+extension AccessoCore.AccessoLog.AccessLevel : Swift.Equatable {}
+extension AccessoCore.AccessoLog.AccessLevel : Swift.Hashable {}
+extension AccessoCore.AccessoLog.AccessLevel : Swift.RawRepresentable {}
+extension AccessoCore.AccessoLog.LogLevel : Swift.Equatable {}
+extension AccessoCore.AccessoLog.LogLevel : Swift.Hashable {}
+extension AccessoCore.AccessoLog.LogLevel : Swift.RawRepresentable {}
+extension AccessoCore.HTTPMethod : Swift.Equatable {}
+extension AccessoCore.HTTPMethod : Swift.Hashable {}
+extension AccessoCore.HTTPMethod : Swift.RawRepresentable {}
