@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Background color</key>
+	<string>LaunchScreenBackgroundColor</string>
+	<key>Image Name</key>
+	<string>LaunchScreenLogo</string>
+	<key>Image respects safe area insets</key>
+	<true/>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>
