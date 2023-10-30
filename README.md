@@ -27,8 +27,7 @@ To seamlessly integrate the AccessoSDKiOS package into your Xcode project using 
 7. Ensure you add the selected framework to your app's main target.
 8. Click "Next" and complete the installation.
 
-
-<img width="1102" alt="Screenshot 2023-08-30 at 9 57 49 AM" src="https://github.com/accesso/accesso-sdk-ios-public/assets/1459355/00faa27e-f264-4335-8a83-f088d03dbdd3">
+![install-SPM](Assets/Screenshot\ 2023-10-31\ at\ 12.10.27\ AM.png)
 
 ### Manual Installation
 Alternatively, you can manually add the package dependency to your `Package.swift` file
