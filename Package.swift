@@ -2,15 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "YourPackageName",
+    name: "AccessoSDK",
     products: [
         .library(name: "AccessoCore", targets: ["AccessoCore"]),
         .library(name: "AccessoExperiencePromoter", targets: ["AccessoExperiencePromoter"]),
         .library(name: "AccessoEntitlements", targets: ["AccessoEntitlements"]),
+        .library(name: "AccessoQueueing", targets: ["AccessoQueueing"])
     ],
-    dependencies: [
-        // No need to specify dependencies if the libraries are standalone
-    ],
+    dependencies: [],
     targets: [
         .binaryTarget(
             name: "AccessoCore",
@@ -23,6 +22,10 @@ let package = Package(
         .binaryTarget(
             name: "AccessoEntitlements",
             path: "./XCFrameworks/AccessoEntitlements.xcframework"
+        ),
+        .binaryTarget(
+            name: "AccessoQueueing",
+            path: "./XCFrameworks/AccessoQueueing.xcframework"
         ),
     ]
 )

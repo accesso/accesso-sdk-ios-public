@@ -1,0 +1,99 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoQueueing
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AccessoCore
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class QueueingProvider : AccessoQueueing.QueueingProviding {
+  public static let shared: AccessoQueueing.QueueingProvider
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAttractions() async throws -> [AccessoQueueing.Attraction]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAttraction(with attractionId: Swift.String) async throws -> AccessoQueueing.Attraction?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func reserveAction(with reservation: AccessoQueueing.ReservationAction) async throws
+  #endif
+  @objc deinit
+}
+public struct Attraction : Swift.Codable, Swift.Identifiable {
+  public let name: Swift.String
+  public let description: Swift.String
+  public let restrictions: [Swift.String]
+  public let id: Swift.String
+  public let state: Swift.String
+  public let waitTimeInMinutes: Swift.Double
+  public let thumbnailImage: Foundation.URL
+  public let reserveActions: [AccessoQueueing.Attraction.ReserveAction]
+  public struct ReserveAction : Swift.Codable, Swift.Identifiable {
+    public let data: AccessoQueueing.Attraction.ReserveAction.ActionData
+    public let description: Swift.String
+    public let id: Swift.String
+    public let inputRequirements: [AccessoQueueing.Attraction.ReserveAction.InputRequirement]
+    public struct ActionData : Swift.Codable {
+      public let key: Swift.String
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct InputRequirement : Swift.Codable, Swift.Identifiable {
+      public let isRequired: Swift.Bool
+      public let defaultValue: Swift.Int
+      public let dataType: Swift.String
+      public let description: Swift.String
+      public let maximum: Swift.Int
+      public let id: Swift.String
+      public let title: Swift.String
+      public let minimum: Swift.Int
+      public typealias ID = Swift.String
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public typealias ID = Swift.String
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ReservationAction : Swift.Codable {
+  public let id: Swift.String
+  public let data: AccessoQueueing.ReservationActionData
+  public init(id: Swift.String, data: AccessoQueueing.ReservationActionData)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ReservationActionData : Swift.Codable {
+  public let seatRow: Swift.Int
+  public let seatNum: Swift.Int
+  public init(seatRow: Swift.Int, seatNum: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol QueueingRemoteDataHandling {
+  #if compiler(>=5.3) && $AsyncAwait
+  func getAttractions() async throws -> [AccessoQueueing.Attraction]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getAttraction(_ attractionId: Swift.String) async throws -> AccessoQueueing.Attraction?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func reserveAction(_ reservation: AccessoQueueing.ReservationAction) async throws
+  #endif
+}
+public protocol QueueingProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  func getAttractions() async throws -> [AccessoQueueing.Attraction]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getAttraction(with attractionId: Swift.String) async throws -> AccessoQueueing.Attraction?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func reserveAction(with reservation: AccessoQueueing.ReservationAction) async throws
+  #endif
+}
