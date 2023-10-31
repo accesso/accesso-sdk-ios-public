@@ -13,19 +13,19 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AccessoCore",
-            path: "./XCFrameworks/AccessoCore.xcframework"
+            path: "./AccessoSDK/XCFrameworks/AccessoCore.xcframework"
         ),
         .binaryTarget(
             name: "AccessoExperiencePromoter",
-            path: "./XCFrameworks/AccessoExperiencePromoter.xcframework"
+            path: "./AccessoSDK/XCFrameworks/AccessoExperiencePromoter.xcframework"
         ),
         .binaryTarget(
             name: "AccessoEntitlements",
-            path: "./XCFrameworks/AccessoEntitlements.xcframework"
+            path: "./AccessoSDK/XCFrameworks/AccessoEntitlements.xcframework"
         ),
         .binaryTarget(
             name: "AccessoQueueing",
-            path: "./XCFrameworks/AccessoQueueing.xcframework"
+            path: "./AccessoSDK/XCFrameworks/AccessoQueueing.xcframework"
         ),
     ]
 )
