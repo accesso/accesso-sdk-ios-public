@@ -5,8 +5,6 @@ let package = Package(
     name: "AccessoSDK",
     products: [
         .library(name: "AccessoCore", targets: ["AccessoCore"]),
-        .library(name: "AccessoExperiencePromoter", targets: ["AccessoExperiencePromoter"]),
-        .library(name: "AccessoEntitlements", targets: ["AccessoEntitlements"]),
         .library(name: "AccessoQueueing", targets: ["AccessoQueueing"])
     ],
     dependencies: [],
@@ -14,14 +12,6 @@ let package = Package(
         .binaryTarget(
             name: "AccessoCore",
             path: "./AccessoSDK/XCFrameworks/AccessoCore.xcframework"
-        ),
-        .binaryTarget(
-            name: "AccessoExperiencePromoter",
-            path: "./AccessoSDK/XCFrameworks/AccessoExperiencePromoter.xcframework"
-        ),
-        .binaryTarget(
-            name: "AccessoEntitlements",
-            path: "./AccessoSDK/XCFrameworks/AccessoEntitlements.xcframework"
         ),
         .binaryTarget(
             name: "AccessoQueueing",
