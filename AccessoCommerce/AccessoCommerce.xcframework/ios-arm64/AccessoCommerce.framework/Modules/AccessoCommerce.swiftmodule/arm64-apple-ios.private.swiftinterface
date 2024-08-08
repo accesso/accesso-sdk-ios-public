@@ -1,0 +1,71 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoCommerce
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AccessoCore
+import Foundation
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class CommerceProvider : AccessoCommerce.CommerceProviding {
+  public static let shared: AccessoCommerce.CommerceProvider
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getStoreProducts() async throws -> [AccessoCommerce.StoreProduct]
+  #endif
+  @objc deinit
+}
+public protocol CommerceProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  func getStoreProducts() async throws -> [AccessoCommerce.StoreProduct]
+  #endif
+}
+public struct StoreProduct : Swift.Codable {
+  public let description: Swift.String?
+  public let details: [AccessoCommerce.StoreProduct.Detail]?
+  public let extensionField: [Swift.String : Swift.String]?
+  public let id: Swift.String
+  public let infoImages: [AccessoCommerce.StoreProduct.ProductImage]?
+  public let label: Swift.String?
+  public let lastChanged: Swift.String?
+  public let lastChangedBy: Swift.String?
+  public let mainImages: [AccessoCommerce.StoreProduct.ProductImage]?
+  public let purchaseLink: Swift.String?
+  public let purchasePhone: Swift.String?
+  public let status: Swift.String?
+  public let trackingPurchaseLinkPostfix: Swift.String?
+  public let type: Swift.String?
+  public let venueId: Swift.String?
+  public let isFeatured: Swift.Bool?
+  public let featuredMessage: Swift.String?
+  public init(description: Swift.String? = nil, details: [AccessoCommerce.StoreProduct.Detail]? = nil, extensionField: [Swift.String : Swift.String]? = nil, id: Swift.String, infoImages: [AccessoCommerce.StoreProduct.ProductImage]? = nil, label: Swift.String? = nil, lastChanged: Swift.String? = nil, lastChangedBy: Swift.String? = nil, mainImages: [AccessoCommerce.StoreProduct.ProductImage]? = nil, purchaseLink: Swift.String? = nil, purchasePhone: Swift.String? = nil, status: Swift.String? = nil, trackingPurchaseLinkPostfix: Swift.String? = nil, type: Swift.String? = nil, venueId: Swift.String? = nil, isFeatured: Swift.Bool? = nil, featuredMessage: Swift.String? = nil)
+  public struct Detail : Swift.Codable {
+    public let description: Swift.String?
+    public let id: Swift.String
+    public let images: [AccessoCommerce.StoreProduct.ProductImage]?
+    public let label: Swift.String?
+    public let value: [Swift.String : Swift.String]?
+    public init(description: Swift.String? = nil, id: Swift.String, images: [AccessoCommerce.StoreProduct.ProductImage]? = nil, label: Swift.String? = nil, value: [Swift.String : Swift.String]? = nil)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct ProductImage : Swift.Codable {
+    public let height: Swift.Int?
+    public let resolution: Swift.String?
+    public let src: Swift.String?
+    public let width: Swift.Int?
+    public init(height: Swift.Int? = nil, resolution: Swift.String? = nil, src: Swift.String? = nil, width: Swift.Int? = nil)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ProductShopView : SwiftUI.View {
+  public init(module: any AccessoCommerce.CommerceProviding = CommerceProvider.shared)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s15AccessoCommerce15ProductShopViewV4bodyQrvp", 0) __
+}

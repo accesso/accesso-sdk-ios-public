@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>COLOR_CONFIG</key>
+	<dict>
+		<key>primary</key>
+		<string>FFFFFF</string>
+		<key>primarylight</key>
+		<string>4B4C99</string>
+		<key>primaryDark</key>
+		<string>12134C</string>
+		<key>secondary</key>
+		<string>0073E6</string>
+		<key>secondaryLight</key>
+		<string>338FEB</string>
+		<key>secondaryDark</key>
+		<string>00458A</string>
+		<key>tertiary</key>
+		<string>3A22DD</string>
+		<key>tertiaryLight</key>
+		<string>614EE3</string>
+		<key>tertiaryDark</key>
+		<string>221484</string>
+		<key>backgroundlight</key>
+		<string>F8F8F8</string>
+		<key>backgroundDark</key>
+		<string>222222</string>
+		<key>textWhite</key>
+		<string>FFFFFF</string>
+		<key>textDark</key>
+		<string>1A1A1A</string>
+		<key>buttonPrimary</key>
+		<string>1F2080</string>
+		<key>buttonSecondary</key>
+		<string>0073E6</string>
+		<key>success</key>
+		<string>008577</string>
+		<key>warning</key>
+		<string>FFCD29</string>
+		<key>error</key>
+		<string>DE1B3C</string>
+		<key>disabledLight</key>
+		<string>E0E0E0</string>
+		<key>disabledDark</key>
+		<string>424242</string>
+		<key>grayScale4</key>
+		<string>D8D8D8</string>
+	</dict>
+	<key>CORNER_RADIUS_CONFIG</key>
+	<dict>
+		<key>buttonRadius</key>
+		<integer>8</integer>
+		<key>tileRadius</key>
+		<integer>8</integer>
+		<key>contentCardRadius</key>
+		<integer>16</integer>
+	</dict>
+	<key>FONT_CONFIG</key>
+	<dict>
+		<key>customFont</key>
+		<string>Gotham-Book</string>
+	</dict>
+</dict>
+</plist>

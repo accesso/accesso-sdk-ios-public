@@ -1,0 +1,610 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+@_hasMissingDesignatedInitializers public class Identity {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAccessToken(username: Swift.String, password: Swift.String) async throws -> AccessoCore.CoreToken
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAnonymousToken() async throws -> AccessoCore.CoreToken
+  #endif
+  @objc deinit
+}
+public struct CoreToken : Swift.Codable {
+  public let accessToken: Swift.String
+  public let tokenType: Swift.String?
+  public let refreshToken: Swift.String
+  public let expiresIn: Foundation.TimeInterval
+  public let scope: Swift.String?
+  public let accountId: Swift.String?
+  public let userType: Swift.String?
+  public let venueId: Swift.String?
+  public let appUserId: Swift.String?
+  public let organization: Swift.String?
+  public let amr: [AccessoCore.Amr]?
+  public let iss: Swift.String?
+  public let phoneNumber: Swift.String?
+  public let source: Swift.String?
+  public let iat: Swift.Int
+  public let email: Swift.String?
+  public let uuid: Swift.String?
+  public let jti: Swift.String?
+  public let appId: Swift.String?
+  public var accessTokenExpirationDate: Foundation.Date {
+    get
+  }
+  public var refreshTokenExpirationDate: Foundation.Date? {
+    get
+  }
+  public init(accessToken: Swift.String, tokenType: Swift.String? = nil, refreshToken: Swift.String, expiresIn: Foundation.TimeInterval, scope: Swift.String? = nil, accountId: Swift.String? = nil, userType: Swift.String? = nil, venueId: Swift.String? = nil, appUserId: Swift.String? = nil, organization: Swift.String? = nil, amr: [AccessoCore.Amr]? = nil, iss: Swift.String? = nil, phoneNumber: Swift.String? = nil, source: Swift.String? = nil, iat: Swift.Int, email: Swift.String? = nil, uuid: Swift.String? = nil, jti: Swift.String? = nil, appId: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Amr : Swift.Codable {
+  public let authority: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LogParameters {
+  public init(subsystem: AccessoCore.Log.Subsystem = .hostApp, category: AccessoCore.Log.Category = .applevel, access: AccessoCore.Log.AccessLevel = .publicAccess, level: AccessoCore.Log.LogLevel = .info)
+}
+@objc @_inheritsConvenienceInitializers open class Log : ObjectiveC.NSObject {
+  public enum Subsystem : Swift.String {
+    case hostApp
+    case core
+    case experiencePromoter
+    case entitlements
+    case queueing
+    case wallet
+    case commerce
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Category : Swift.String {
+    case applevel
+    case ui
+    case network
+    case database
+    case startup
+    case initialize
+    case shutdown
+    case parsing
+    case file
+    case config
+    case location
+    case analytics
+    case user
+    case cache
+    case barcode
+    case identity
+    case camera
+    case uiTest
+    case unitTest
+    case moduleApp
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AccessLevel : Swift.String {
+    case publicAccess
+    case privateAccess
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum LogLevel : Swift.Int {
+    case debug
+    case info
+    case warning
+    case error
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var currentLogLevel: AccessoCore.Log.LogLevel
+  @discardableResult
+  public class func logEvent(_ message: Swift.String, parameters: AccessoCore.LogParameters = LogParameters()) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol Endpoint {
+  var path: Swift.String { get }
+  func getUrl(config: AccessoCore.Configuration?) -> Swift.String
+}
+public enum CoreError : Swift.String, Swift.Error {
+  case missingVenueId
+  case missingConfig
+  case configFail
+  case genericNetworkError
+  case genericUnknownError
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case CONNECT
+  case DELETE
+  case GET
+  case HEAD
+  case OPTIONS
+  case PATCH
+  case POST
+  case PUT
+  case TRACE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Configuration : Swift.Decodable {
+  public var baseUrl: Swift.String
+  public var appId: Swift.String
+  public var identityUsername: Swift.String
+  public var identityPassword: Swift.String
+  public var username: Swift.String
+  public var password: Swift.String
+  public var preferredLanguage: Swift.String
+  public var venueId: Swift.String
+  public var customerId: Swift.String
+  public var imageBaseUrl: Swift.String
+  public var appUserId: Swift.String?
+  public var appVersion: Swift.String?
+  public var theme: AccessoCore.Theme
+  public init(baseUrl: Swift.String = "", appId: Swift.String = "", identityUsername: Swift.String = "", identityPassword: Swift.String = "", username: Swift.String = "", password: Swift.String = "", preferredLanguage: Swift.String = "", venueId: Swift.String = "", customerId: Swift.String = "", imageBaseUrl: Swift.String = "", appUserId: Swift.String? = nil, appVersion: Swift.String? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public static func config(bundle: Foundation.Bundle = Bundle.main, resource: Swift.String = "Accesso-Info") -> AccessoCore.Configuration?
+}
+public class NetworkSession : AccessoCore.NetworkSessionProviding {
+  public init(session: Foundation.URLSession = URLSession(configuration: .ephemeral), config: AccessoCore.Configuration)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func performRequest(url: Swift.String, method: AccessoCore.HTTPMethod, accessToken: Swift.String?, queryItems: [Foundation.URLQueryItem]? = nil, body: (any Swift.Encodable)?) async throws -> (Foundation.Data, Foundation.HTTPURLResponse)
+  #endif
+  @objc deinit
+}
+public protocol NetworkSessionProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  func performRequest(url: Swift.String, method: AccessoCore.HTTPMethod, accessToken: Swift.String?, queryItems: [Foundation.URLQueryItem]?, body: (any Swift.Encodable)?) async throws -> (Foundation.Data, Foundation.HTTPURLResponse)
+  #endif
+}
+public enum NetworkingError : Swift.Error {
+  case serverError(statusCode: Swift.Int)
+  case unknownError
+}
+extension AccessoCore.NetworkingError : Swift.Equatable {
+  public static func == (lhs: AccessoCore.NetworkingError, rhs: AccessoCore.NetworkingError) -> Swift.Bool
+}
+extension Foundation.NSNotification.Name {
+  public static let receivedBarcode: Foundation.Notification.Name
+}
+public struct BarcodeScanner : SwiftUI.UIViewControllerRepresentable {
+  @SwiftUI.Binding @_projectedValueProperty($result) public var result: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating _modify
+  }
+  public var $result: SwiftUI.Binding<Swift.String> {
+    get
+  }
+  @SwiftUI.Binding @_projectedValueProperty($shouldStopSession) public var shouldStopSession: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating _modify
+  }
+  public var $shouldStopSession: SwiftUI.Binding<Swift.Bool> {
+    get
+  }
+  public init(result: SwiftUI.Binding<Swift.String>, shouldStopSession: SwiftUI.Binding<Swift.Bool>, scannerType: AccessoCore.ScannerType = .barcode)
+  @_Concurrency.MainActor(unsafe) public func makeUIViewController(context: AccessoCore.BarcodeScanner.Context) -> AccessoCore.ScannerController
+  @_Concurrency.MainActor(unsafe) public func updateUIViewController(_ uiViewController: AccessoCore.ScannerController, context: AccessoCore.BarcodeScanner.Context)
+  @_Concurrency.MainActor(unsafe) public func makeCoordinator() -> AccessoCore.Coordinator
+  public typealias Body = Swift.Never
+  public typealias Coordinator = AccessoCore.Coordinator
+  public typealias UIViewControllerType = AccessoCore.ScannerController
+}
+@objc public class Coordinator : ObjectiveC.NSObject, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @SwiftUI.Binding @_projectedValueProperty($scanResult) public var scanResult: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $scanResult: SwiftUI.Binding<Swift.String> {
+    get
+  }
+  public init(_ scanResult: SwiftUI.Binding<Swift.String>)
+  @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+  @objc deinit
+}
+public enum ScannerType {
+  case barcode
+  case qrCode
+  public static func == (a: AccessoCore.ScannerType, b: AccessoCore.ScannerType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ScannerController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var delegate: (any AVFoundation.AVCaptureMetadataOutputObjectsDelegate)?
+  @_Concurrency.MainActor(unsafe) public var scannerType: AccessoCore.ScannerType
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+public protocol AVMediaAuthorizationStatusProviding {
+  func authorizationStatus(for mediaType: AVFoundation.AVMediaType) -> AVFoundation.AVAuthorizationStatus
+}
+public class AVMediaAuthorizationStatusProvider : AccessoCore.AVMediaAuthorizationStatusProviding {
+  public init()
+  public func authorizationStatus(for mediaType: AVFoundation.AVMediaType) -> AVFoundation.AVAuthorizationStatus
+  @objc deinit
+}
+public class CameraProvider {
+  public init(avMediaAuthorizationStatusProvider: any AccessoCore.AVMediaAuthorizationStatusProviding)
+  public class func createCameraManager(avMediaAuthorizationStatusProvider: any AccessoCore.AVMediaAuthorizationStatusProviding = AVMediaAuthorizationStatusProvider()) -> AccessoCore.CameraProvider
+  #if compiler(>=5.3) && $AsyncAwait
+  public func isAuthorizedForVideo(forceRequest: Swift.Bool = false) async -> Swift.Bool
+  #endif
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CoreProvider {
+  public static var shared: AccessoCore.CoreProvider {
+    get
+  }
+  public static var colorConfig: AccessoCore.ColorConfig {
+    get
+  }
+  public static var cornerRadiusConfig: AccessoCore.CornerRadiusConfig {
+    get
+  }
+  public static var fontConfig: AccessoCore.FontConfig {
+    get
+  }
+  public var configuration: AccessoCore.Configuration? {
+    get
+  }
+  public var identity: AccessoCore.Identity {
+    get
+  }
+  public var networkSession: AccessoCore.NetworkSession {
+    get
+  }
+  public var cameraManager: AccessoCore.CameraProvider {
+    get
+  }
+  public static func configure(using configuration: AccessoCore.Configuration? = Configuration.config(), logLevel: AccessoCore.Log.LogLevel = .info)
+  public func configureThemeCustomization(bundle: Foundation.Bundle = .main, fromResource resource: Swift.String = "Accesso-Theme")
+  @objc deinit
+}
+extension Swift.Optional where Wrapped : Swift.Collection {
+  public var isNilOrEmpty: Swift.Bool {
+    get
+  }
+}
+extension Foundation.Date {
+  public static var yesterday: Foundation.Date? {
+    get
+  }
+  public static var tomorrow: Foundation.Date? {
+    get
+  }
+  public var dayBefore: Foundation.Date? {
+    get
+  }
+  public var dayAfter: Foundation.Date? {
+    get
+  }
+  public var noon: Foundation.Date? {
+    get
+  }
+  public var day: Swift.Int {
+    get
+  }
+  public var month: Swift.Int {
+    get
+  }
+  public var year: Swift.Int {
+    get
+  }
+  public var isLastDayOfMonth: Swift.Bool {
+    get
+  }
+  public func dateWithTime(formatter: Foundation.DateFormatter?, locale: Foundation.Locale?, timeZone: Foundation.TimeZone?) -> Swift.String
+  public func date(formatter: Foundation.DateFormatter?, locale: Foundation.Locale?, timeZone: Foundation.TimeZone?) -> Swift.String
+  public func dateString(formatter: Foundation.DateFormatter = DateFormatter(), dateStyle: Foundation.DateFormatter.Style = .short, timeStyle: Foundation.DateFormatter.Style = .none, locale: Foundation.Locale? = Locale.current, timeZone: Foundation.TimeZone? = TimeZone.current, template: Swift.String?) -> Swift.String
+  public func range(formatter: Foundation.DateIntervalFormatter = DateIntervalFormatter(), toDate: Foundation.Date, locale: Foundation.Locale? = Locale.current, timeZone: Foundation.TimeZone? = TimeZone.current, dateStyle: Foundation.DateIntervalFormatter.Style = .short, timeStyle: Foundation.DateIntervalFormatter.Style = .short, template: Swift.String? = nil) -> Swift.String
+  public func rangeFromDateFormatter(formatter: Foundation.DateFormatter = DateFormatter(), toDate: Foundation.Date, locale: Foundation.Locale? = Locale.current, timeZone: Foundation.TimeZone? = TimeZone.current, dateStyle: Foundation.DateFormatter.Style = .medium, timeStyle: Foundation.DateFormatter.Style = .medium, template: Swift.String? = nil) -> Swift.String
+  public var beginningOfDay: Foundation.Date {
+    get
+  }
+  public func mediumDateString(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public var isToday: Swift.Bool {
+    get
+  }
+  public var isTomorrow: Swift.Bool {
+    get
+  }
+  public var isYesterday: Swift.Bool {
+    get
+  }
+  public func isBetween(startDate: Foundation.Date, endDate: Foundation.Date) -> Swift.Bool
+  public var endOfDay: Foundation.Date {
+    get
+  }
+  public func isFullDay(end: Foundation.Date) -> Swift.Bool
+  public func spaceSeparatedMonthDayYear(timeZone: Foundation.TimeZone?) -> Swift.String
+  public static func date(fromString dateString: Swift.String) -> Foundation.Date?
+  public func daysBetween(endDate: Foundation.Date, calendar: Foundation.Calendar = Calendar.current) -> Swift.Int
+  public func monthDayYearHoursMinutes(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func hoursAndMinutes(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func monthString(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func dayString(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func monthDay(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func monthNameDay(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func monthDayYear(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func getDayOfWeek(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.Int
+  public func getDayOfWeekString(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public static func format(interval: Foundation.TimeInterval) -> Swift.String?
+}
+extension Foundation.DateFormatter {
+  public static let fullISO8601: Foundation.DateFormatter
+}
+extension Foundation.TimeZone {
+  public init?(iso8601String: Swift.String)
+}
+public struct ColorConfig : Swift.Codable {
+  public let primary: Swift.String
+  public let primarylight: Swift.String
+  public let primaryDark: Swift.String
+  public let secondary: Swift.String
+  public let secondaryLight: Swift.String
+  public let secondaryDark: Swift.String
+  public let tertiary: Swift.String
+  public let tertiaryLight: Swift.String
+  public let tertiaryDark: Swift.String
+  public let backgroundlight: Swift.String
+  public let backgroundDark: Swift.String
+  public let textWhite: Swift.String
+  public let textDark: Swift.String
+  public let buttonPrimary: Swift.String
+  public let buttonSecondary: Swift.String
+  public let success: Swift.String
+  public let warning: Swift.String
+  public let error: Swift.String
+  public let disabledLight: Swift.String
+  public let disabledDark: Swift.String
+  public let grayScale4: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension AccessoCore.ColorConfig {
+  public var topTabHighlight: SwiftUI.Color {
+    get
+  }
+  public var unSelectedChipText: SwiftUI.Color {
+    get
+  }
+  public var selectedChipText: SwiftUI.Color {
+    get
+  }
+  public var unSelectedChipBorder: SwiftUI.Color {
+    get
+  }
+  public var selectedChipBorder: SwiftUI.Color {
+    get
+  }
+  public var selectedChipFill: SwiftUI.Color {
+    get
+  }
+  public var readOnlyChipText: SwiftUI.Color {
+    get
+  }
+  public var readOnlyChipFill: SwiftUI.Color {
+    get
+  }
+  public var bigTitleColor: SwiftUI.Color {
+    get
+  }
+  public var titleColor: SwiftUI.Color {
+    get
+  }
+  public var subTextColor: SwiftUI.Color {
+    get
+  }
+  public var primaryBtnText: SwiftUI.Color {
+    get
+  }
+  public var primaryBtnFill: SwiftUI.Color {
+    get
+  }
+  public var secondaryBtnText: SwiftUI.Color {
+    get
+  }
+  public var secondaryBtnFill: SwiftUI.Color {
+    get
+  }
+  public var secondaryBtnBorder: SwiftUI.Color {
+    get
+  }
+  public var textBtn: SwiftUI.Color {
+    get
+  }
+}
+public struct CornerRadiusConfig : Swift.Codable {
+  public let buttonRadius: CoreFoundation.CGFloat
+  public let tileRadius: CoreFoundation.CGFloat
+  public let contentCardRadius: CoreFoundation.CGFloat
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FontConfig : Swift.Codable {
+  public let customFont: Swift.String
+  public init(customFont: Swift.String)
+  public func font(forTextStyle textStyle: SwiftUI.Font.TextStyle = .body, weight: SwiftUI.Font.Weight = .regular) -> SwiftUI.Font
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Theme : Swift.Codable {
+  public let colorConfig: AccessoCore.ColorConfig
+  public let fontConfig: AccessoCore.FontConfig
+  public let cornerRadiusConfig: AccessoCore.CornerRadiusConfig
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ButtonRole {
+  case cancel
+  case destructive
+  case normal
+  public static func == (a: AccessoCore.ButtonRole, b: AccessoCore.ButtonRole) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct AccessoAlertDetails : Swift.Identifiable {
+  public let id: Foundation.UUID
+  public let title: Swift.String
+  public let message: Swift.String
+  public let buttons: [AccessoCore.AccessoAlertDetails.Button]
+  public init(title: Swift.String, message: Swift.String, buttons: [AccessoCore.AccessoAlertDetails.Button] = [])
+  public struct Button {
+    public let title: Swift.String
+    public let role: AccessoCore.ButtonRole
+    public let action: () -> Swift.Void
+  }
+  public typealias ID = Foundation.UUID
+}
+public class SearchDebouncer {
+  public init(delay: Foundation.TimeInterval, queue: Dispatch.DispatchQueue = DispatchQueue.main)
+  public func debounce(_ action: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public enum ViewState {
+  case loading
+  case success
+  case failure(any Swift.Error)
+}
+public enum ScaleSize : CoreFoundation.CGFloat {
+  case small
+  case medium
+  case large
+  public init?(rawValue: CoreFoundation.CGFloat)
+  public typealias RawValue = CoreFoundation.CGFloat
+  public var rawValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+public struct AccessoProgress : SwiftUI.View {
+  public init(isVisible: Swift.Bool = false, tintColor: SwiftUI.Color = .gray, scaleSize: AccessoCore.ScaleSize = .medium)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11AccessoCore0A8ProgressV4bodyQrvp", 0) __
+}
+public struct AsyncImageView : SwiftUI.View {
+  public let imageURL: Swift.String?
+  public let cornerRadius: CoreFoundation.CGFloat
+  public let size: CoreFoundation.CGSize
+  public let contentMode: SwiftUI.ContentMode
+  public let showSpinner: Swift.Bool
+  public let disableImageSize: Swift.Bool
+  public init(imageURL: Swift.String? = nil, cornerRadius: CoreFoundation.CGFloat = 0, size: CoreFoundation.CGSize, contentMode: SwiftUI.ContentMode = .fill, showSpinner: Swift.Bool = true, disableImageSize: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11AccessoCore14AsyncImageViewV4bodyQrvp", 0) __
+}
+public struct LoadingRectView : SwiftUI.View {
+  public let cornerRadius: CoreFoundation.CGFloat
+  public init(cornerRadius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11AccessoCore15LoadingRectViewV4bodyQrvp", 0) __
+}
+public struct LoadingImageView : SwiftUI.View {
+  public let cornerRadius: CoreFoundation.CGFloat
+  public let size: CoreFoundation.CGSize
+  public init(cornerRadius: CoreFoundation.CGFloat, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11AccessoCore16LoadingImageViewV4bodyQrvp", 0) __
+}
+extension SwiftUI.View {
+  public func alert(with showAlert: SwiftUI.Binding<Swift.Bool>, alertDetails: SwiftUI.Binding<AccessoCore.AccessoAlertDetails?>) -> some SwiftUI.View
+  
+}
+@available(iOS 16.0, *)
+public struct _WrappingHStack : SwiftUI.Layout {
+  public var alignment: SwiftUI.Alignment
+  public var horizontalSpacing: CoreFoundation.CGFloat?
+  public var verticalSpacing: CoreFoundation.CGFloat?
+  public var fitContentWidth: Swift.Bool
+  public init(alignment: SwiftUI.Alignment = .center, horizontalSpacing: CoreFoundation.CGFloat? = nil, verticalSpacing: CoreFoundation.CGFloat? = nil, fitContentWidth: Swift.Bool = false)
+  public static var layoutProperties: SwiftUI.LayoutProperties {
+    get
+  }
+  public struct Cache {
+  }
+  public func makeCache(subviews: AccessoCore._WrappingHStack.Subviews) -> AccessoCore._WrappingHStack.Cache
+  public func updateCache(_ cache: inout AccessoCore._WrappingHStack.Cache, subviews: AccessoCore._WrappingHStack.Subviews)
+  public func sizeThatFits(proposal: SwiftUI.ProposedViewSize, subviews: AccessoCore._WrappingHStack.Subviews, cache: inout AccessoCore._WrappingHStack.Cache) -> CoreFoundation.CGSize
+  public func placeSubviews(in bounds: CoreFoundation.CGRect, proposal: SwiftUI.ProposedViewSize, subviews: AccessoCore._WrappingHStack.Subviews, cache: inout AccessoCore._WrappingHStack.Cache)
+  public typealias AnimatableData = SwiftUI.EmptyAnimatableData
+}
+extension AccessoCore.Log.Subsystem : Swift.Equatable {}
+extension AccessoCore.Log.Subsystem : Swift.Hashable {}
+extension AccessoCore.Log.Subsystem : Swift.RawRepresentable {}
+extension AccessoCore.Log.Category : Swift.Equatable {}
+extension AccessoCore.Log.Category : Swift.Hashable {}
+extension AccessoCore.Log.Category : Swift.RawRepresentable {}
+extension AccessoCore.Log.AccessLevel : Swift.Equatable {}
+extension AccessoCore.Log.AccessLevel : Swift.Hashable {}
+extension AccessoCore.Log.AccessLevel : Swift.RawRepresentable {}
+extension AccessoCore.Log.LogLevel : Swift.Equatable {}
+extension AccessoCore.Log.LogLevel : Swift.Hashable {}
+extension AccessoCore.Log.LogLevel : Swift.RawRepresentable {}
+extension AccessoCore.CoreError : Swift.Equatable {}
+extension AccessoCore.CoreError : Swift.Hashable {}
+extension AccessoCore.CoreError : Swift.RawRepresentable {}
+extension AccessoCore.HTTPMethod : Swift.Equatable {}
+extension AccessoCore.HTTPMethod : Swift.Hashable {}
+extension AccessoCore.HTTPMethod : Swift.RawRepresentable {}
+extension AccessoCore.ScannerType : Swift.Equatable {}
+extension AccessoCore.ScannerType : Swift.Hashable {}
+extension AccessoCore.ButtonRole : Swift.Equatable {}
+extension AccessoCore.ButtonRole : Swift.Hashable {}
+extension AccessoCore.ScaleSize : Swift.Equatable {}
+extension AccessoCore.ScaleSize : Swift.Hashable {}
+extension AccessoCore.ScaleSize : Swift.RawRepresentable {}

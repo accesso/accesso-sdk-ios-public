@@ -1,0 +1,347 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoEntitlements
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AccessoCore
+import AccessoWallet
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol EntitlementsProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  func claimEntitlement(registrationType: AccessoEntitlements.ClaimEntitlementType) async throws -> AccessoEntitlements.ClaimEntitlementResult
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getEntitlements() async throws -> [AccessoEntitlements.Entitlement]
+  #endif
+}
+public enum ClaimEntitlementType {
+  case barcode(code: Swift.String)
+  case orderId(id: Swift.String, orderEmail: Swift.String)
+}
+public struct ClaimEntitlementStatus : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ClaimEntitlementResult : Swift.Equatable {
+  case claimed(status: AccessoEntitlements.ClaimEntitlementStatus)
+  case claimedButProcessing(status: AccessoEntitlements.ClaimEntitlementStatus)
+  case notFound
+  public static func == (lhs: AccessoEntitlements.ClaimEntitlementResult, rhs: AccessoEntitlements.ClaimEntitlementResult) -> Swift.Bool
+}
+extension AccessoEntitlements.Entitlement {
+  public func createWalletPass() -> AccessoWallet.WalletPass
+}
+public struct Entitlement : Swift.Codable {
+  public let id: Swift.String
+  public let entitlementType: AccessoEntitlements.EntitlementType
+  public let couponCode: Swift.String?
+  public let deleted: Swift.Bool?
+  public let additionalFields: AccessoEntitlements.EntitlementAdditionalFields?
+  public let description: Swift.String
+  public let displayClassId: Swift.String
+  public let displayName: Swift.String
+  public let eligibleUsers: [AccessoEntitlements.EntitlementUser]?
+  public let entitlementRuleId: Swift.Int?
+  public let lastEventAt: Swift.String?
+  public let lastUsed: Swift.String?
+  public let parentEntitlementId: Swift.String?
+  public let parentEntitlementSystemOfRecordId: Swift.String?
+  public let productId: Swift.String?
+  public let quantityTotal: Swift.Int?
+  public let quantityUsed: Swift.Int?
+  public let redemptionUrl: Swift.String?
+  public let status: Swift.String
+  public let systemOfRecordId: Swift.String
+  public let associatedEntitlementIds: [Swift.String]?
+  public let usages: [AccessoEntitlements.EntitlementUsage]?
+  public let validity: AccessoEntitlements.EntitlementValidity?
+  public let valueCurrency: Swift.String?
+  public let valueTotal: Swift.Double?
+  public let valueUsed: Swift.Double?
+  public let productDetails: AccessoEntitlements.EntitlementProductDetail?
+  public let displayClass: AccessoEntitlements.EntitlementDisplayClass
+  public let orderId: Swift.String?
+  public let orderDateTime: Swift.String?
+  public let barcode: Swift.String?
+  public let barcodeType: Swift.String?
+  public let parentBarcode: Swift.String?
+  public let customerTypeCode: Swift.String?
+  public let customerTypeDescription: Swift.String?
+  public let promoCode: Swift.String?
+  public let rateId: Swift.String?
+  public let ticketBasePrice: Swift.Double?
+  public let ticketRetailPrice: Swift.Double?
+  public let ticketTax: Swift.Double?
+  public let ticketTotalPrice: Swift.Double?
+  public let passholder: AccessoEntitlements.EntitlementTicketPassholder?
+  public let vendor: AccessoEntitlements.EntitlementTicketVendor?
+  public let event: AccessoEntitlements.EntitlementTicketEvent?
+  public let ticketCode: Swift.String?
+  public let plu: Swift.String?
+  public let seasonPassNumber: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum EntitlementType : Swift.String, Swift.Codable {
+  case entitlement
+  case ticket
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct EntitlementAdditionalFields : Swift.Codable {
+  public let parentEntitlement: Swift.String?
+  public let extendedData: [Swift.String : Swift.String?]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementDisplayClass : Swift.Codable {
+  public let id: Swift.String?
+  public let color: Swift.String?
+  public let name: Swift.String?
+  public let source: Swift.String?
+  public let type: Swift.String?
+  public let image: AccessoEntitlements.EntitlementImage?
+  public let displayExternally: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ImageResolution : Swift.String, Swift.Codable {
+  case mdpi
+  case hdpi
+  case xhdpi
+  case xxhdpi
+  case xxxhdpi
+  case all
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct EntitlementImage : Swift.Codable {
+  public let id: Swift.String?
+  public let height: Swift.Int?
+  public let key: Swift.String?
+  public let resolution: AccessoEntitlements.ImageResolution?
+  public let src: Swift.String?
+  public let width: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementProductDetail : Swift.Codable {
+  public let id: Swift.String?
+  public let isActive: Swift.Bool
+  public let name: Swift.String
+  public let description: Swift.String
+  public let image: Swift.String?
+  public let imageHash: Swift.String?
+  public let timeSpan: Swift.Double?
+  public let timeSpanType: AccessoEntitlements.TimeSpanType?
+  public let pricing: AccessoEntitlements.Pricing
+  public let admissionCount: Swift.Double?
+  public let minimumSellQuantity: Swift.Double?
+  public let maximumSellQuantity: Swift.Double?
+  public let isTaxable: Swift.Bool?
+  public let externalTaxCode: Swift.String?
+  public let itemTypeDescription: Swift.String?
+  public let taxes: [AccessoEntitlements.TaxFee]
+  public let fees: [AccessoEntitlements.TaxFee]
+  public let availabilityConfiguration: AccessoEntitlements.EntitlementValidity?
+  public let ageRestriction: AccessoEntitlements.AgeRestriction?
+  public let discounts: AccessoEntitlements.Discount?
+  public let modifierGroups: [AccessoEntitlements.ModifierGroup]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum TimeSpanType : Swift.String, Swift.Codable {
+  case days
+  case minutes
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TaxFeeModificationType : Swift.String, Swift.Codable {
+  case fixed
+  case percent
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DiscountModificationType : Swift.String, Swift.Codable {
+  case fixed
+  case percent
+  case finalPrice
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Pricing : Swift.Codable {
+  public let isCalendarBasedPricing: Swift.Bool?
+  public let isRuleBasedPricing: Swift.Bool?
+  public let isSimplePricing: Swift.Bool?
+  public let allowPriceOverride: Swift.Bool?
+  public let basePrices: Swift.String?
+  public let pricingRule: AccessoEntitlements.EntitlementRule?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TaxFee : Swift.Codable {
+  public let name: Swift.String?
+  public let isIncludedInPrice: Swift.Bool?
+  public let modificationType: AccessoEntitlements.TaxFeeModificationType?
+  public let rate: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AgeRestriction : Swift.Codable {
+  public let start: Swift.Double?
+  public let end: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Discount : Swift.Codable {
+  public let id: Swift.String?
+  public let name: Swift.String?
+  public let isMarketingCodeRequired: Swift.Bool?
+  public let isSourceCodeRequired: Swift.Bool?
+  public let isRuleBased: Swift.Bool?
+  public let requiresMembership: Swift.Bool?
+  public let priceModifications: [AccessoEntitlements.PriceModification]?
+  public let modificationType: AccessoEntitlements.DiscountModificationType?
+  public let value: Swift.Double?
+  public let roundTo: Swift.Double?
+  public let availabilityConfiguration: AccessoEntitlements.EntitlementValidity?
+  public let rule: AccessoEntitlements.EntitlementRule?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PriceModification : Swift.Codable {
+  public let modificationType: Swift.String?
+  public let value: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ModifierGroup : Swift.Codable {
+  public let id: Swift.String?
+  public let name: Swift.String?
+  public let isModifierRequired: Swift.Bool?
+  public let modifierMinimumQuantity: Swift.Double?
+  public let modifierMaximumQuantity: Swift.Double?
+  public let modifiers: [AccessoEntitlements.EntitlementProductDetail]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementTicketPassholder : Swift.Codable {
+  public let user: AccessoEntitlements.EntitlementUser
+  public let firstName: Swift.String
+  public let lastName: Swift.String
+  public let photoUrl: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementTicketVendor : Swift.Codable {
+  public let vendorId: Swift.String
+  public let vendorDesc: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementTicketEvent : Swift.Codable {
+  public let eventId: Swift.String
+  public let eventDesc: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementUser : Swift.Codable {
+  public let userId: Swift.String?
+  public let email: Swift.String?
+  public let externalId: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementUsage : Swift.Codable {
+  public let id: Swift.String?
+  public let status: Swift.String?
+  public let usageId: Swift.String?
+  public let usageTimestamp: Swift.String?
+  public let accessPointId: Swift.Int?
+  public let agentId: Swift.Int?
+  public let deviceId: Swift.Int?
+  public let quantityUsed: Swift.Int?
+  public let user: AccessoEntitlements.EntitlementUser?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ValiditySpan : Swift.Codable {
+  public let start: Swift.String?
+  public let end: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DaysOfWeek : Swift.Codable {
+  public let monday: Swift.Bool
+  public let tuesday: Swift.Bool
+  public let wednesday: Swift.Bool
+  public let thursday: Swift.Bool
+  public let friday: Swift.Bool
+  public let saturday: Swift.Bool
+  public let sunday: Swift.Bool
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct EntitlementValidity : Swift.Codable {
+  public let dateSpan: AccessoEntitlements.ValiditySpan?
+  public let timeSpan: AccessoEntitlements.ValiditySpan?
+  public let daysOfWeek: AccessoEntitlements.DaysOfWeek?
+  public let blockoutDates: [AccessoEntitlements.ValiditySpan]?
+  public let validAtSites: [Swift.String]?
+  public let validAtLocations: [Swift.String]?
+  public func startDate() -> Foundation.Date?
+  public func endDate() -> Foundation.Date?
+  public func dateString() -> Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntitlementRule : Swift.Codable {
+  public let id: Swift.String
+  public let name: Swift.String
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class EntitlementsProvider : AccessoEntitlements.EntitlementsProviding {
+  public static let shared: AccessoEntitlements.EntitlementsProvider
+  #if compiler(>=5.3) && $AsyncAwait
+  public func claimEntitlement(registrationType claimType: AccessoEntitlements.ClaimEntitlementType) async throws -> AccessoEntitlements.ClaimEntitlementResult
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getEntitlements() async throws -> [AccessoEntitlements.Entitlement]
+  #endif
+  @objc deinit
+}
+extension AccessoEntitlements.EntitlementType : Swift.Equatable {}
+extension AccessoEntitlements.EntitlementType : Swift.Hashable {}
+extension AccessoEntitlements.EntitlementType : Swift.RawRepresentable {}
+extension AccessoEntitlements.ImageResolution : Swift.Equatable {}
+extension AccessoEntitlements.ImageResolution : Swift.Hashable {}
+extension AccessoEntitlements.ImageResolution : Swift.RawRepresentable {}
+extension AccessoEntitlements.TimeSpanType : Swift.Equatable {}
+extension AccessoEntitlements.TimeSpanType : Swift.Hashable {}
+extension AccessoEntitlements.TimeSpanType : Swift.RawRepresentable {}
+extension AccessoEntitlements.TaxFeeModificationType : Swift.Equatable {}
+extension AccessoEntitlements.TaxFeeModificationType : Swift.Hashable {}
+extension AccessoEntitlements.TaxFeeModificationType : Swift.RawRepresentable {}
+extension AccessoEntitlements.DiscountModificationType : Swift.Equatable {}
+extension AccessoEntitlements.DiscountModificationType : Swift.Hashable {}
+extension AccessoEntitlements.DiscountModificationType : Swift.RawRepresentable {}

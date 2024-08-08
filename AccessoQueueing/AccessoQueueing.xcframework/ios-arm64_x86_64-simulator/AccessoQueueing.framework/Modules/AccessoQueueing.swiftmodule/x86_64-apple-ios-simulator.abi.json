@@ -1,0 +1,3765 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QueueingProvider",
+        "printedName": "QueueingProvider",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QueueingProvider",
+                "printedName": "AccessoQueueing.QueueingProvider",
+                "usr": "s:15AccessoQueueing0B8ProviderC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing0B8ProviderC6sharedACvpZ",
+            "mangledName": "$s15AccessoQueueing0B8ProviderC6sharedACvpZ",
+            "moduleName": "AccessoQueueing",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QueueingProvider",
+                    "printedName": "AccessoQueueing.QueueingProvider",
+                    "usr": "s:15AccessoQueueing0B8ProviderC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing0B8ProviderC6sharedACvgZ",
+                "mangledName": "$s15AccessoQueueing0B8ProviderC6sharedACvgZ",
+                "moduleName": "AccessoQueueing",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "queueingDataCoordinator",
+            "printedName": "queueingDataCoordinator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QueueingDataCoordinator",
+                "printedName": "AccessoQueueing.QueueingDataCoordinator",
+                "usr": "s:15AccessoQueueing0B15DataCoordinatorC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0Cvp",
+            "mangledName": "$s15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0Cvp",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QueueingDataCoordinator",
+                    "printedName": "AccessoQueueing.QueueingDataCoordinator",
+                    "usr": "s:15AccessoQueueing0B15DataCoordinatorC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0Cvg",
+                "mangledName": "$s15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0Cvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QueueingDataCoordinator",
+                    "printedName": "AccessoQueueing.QueueingDataCoordinator",
+                    "usr": "s:15AccessoQueueing0B15DataCoordinatorC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0Cvs",
+                "mangledName": "$s15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0Cvs",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0CvM",
+                "mangledName": "$s15AccessoQueueing0B8ProviderC23queueingDataCoordinatorAA0beF0CvM",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getAttractions",
+            "printedName": "getAttractions()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B8ProviderC14getAttractionsSayAA10AttractionVGyYaKF",
+            "mangledName": "$s15AccessoQueueing0B8ProviderC14getAttractionsSayAA10AttractionVGyYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAttraction",
+            "printedName": "getAttraction(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoQueueing.Attraction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B8ProviderC13getAttraction4withAA0E0VSgSS_tYaKF",
+            "mangledName": "$s15AccessoQueueing0B8ProviderC13getAttraction4withAA0E0VSgSS_tYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reserveAction",
+            "printedName": "reserveAction(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B8ProviderC13reserveAction4withyAA011ReservationE0V_tYaKF",
+            "mangledName": "$s15AccessoQueueing0B8ProviderC13reserveAction4withyAA011ReservationE0V_tYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reset",
+            "printedName": "reset()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B8ProviderC5resetyyF",
+            "mangledName": "$s15AccessoQueueing0B8ProviderC5resetyyF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15AccessoQueueing0B8ProviderC",
+        "mangledName": "$s15AccessoQueueing0B8ProviderC",
+        "moduleName": "AccessoQueueing",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "QueueingProviding",
+            "printedName": "QueueingProviding",
+            "usr": "s:15AccessoQueueing0B9ProvidingP",
+            "mangledName": "$s15AccessoQueueing0B9ProvidingP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QueueingDataCoordinator",
+        "printedName": "QueueingDataCoordinator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "remote",
+            "printedName": "remote",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QueueingRemoteDataHandling",
+                "printedName": "AccessoQueueing.QueueingRemoteDataHandling",
+                "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing0B15DataCoordinatorC6remote33_7F4D2A04DB30B40D9EEDCA7884EB54F3LLAA0b6RemoteC8Handling_pvp",
+            "mangledName": "$s15AccessoQueueing0B15DataCoordinatorC6remote33_7F4D2A04DB30B40D9EEDCA7884EB54F3LLAA0b6RemoteC8Handling_pvp",
+            "moduleName": "AccessoQueueing",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(remote:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QueueingDataCoordinator",
+                "printedName": "AccessoQueueing.QueueingDataCoordinator",
+                "usr": "s:15AccessoQueueing0B15DataCoordinatorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "QueueingRemoteDataHandling",
+                "printedName": "AccessoQueueing.QueueingRemoteDataHandling",
+                "hasDefaultArg": true,
+                "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing0B15DataCoordinatorC6remoteAcA0b6RemoteC8Handling_p_tcfc",
+            "mangledName": "$s15AccessoQueueing0B15DataCoordinatorC6remoteAcA0b6RemoteC8Handling_p_tcfc",
+            "moduleName": "AccessoQueueing",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getAttractions",
+            "printedName": "getAttractions()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B15DataCoordinatorC14getAttractionsSayAA10AttractionVGyYaKF",
+            "mangledName": "$s15AccessoQueueing0B15DataCoordinatorC14getAttractionsSayAA10AttractionVGyYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAttraction",
+            "printedName": "getAttraction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoQueueing.Attraction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B15DataCoordinatorC13getAttractionyAA0F0VSgSSYaKF",
+            "mangledName": "$s15AccessoQueueing0B15DataCoordinatorC13getAttractionyAA0F0VSgSSYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reserveAction",
+            "printedName": "reserveAction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B15DataCoordinatorC13reserveActionyyAA011ReservationF0VYaKF",
+            "mangledName": "$s15AccessoQueueing0B15DataCoordinatorC13reserveActionyyAA011ReservationF0VYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15AccessoQueueing0B15DataCoordinatorC",
+        "mangledName": "$s15AccessoQueueing0B15DataCoordinatorC",
+        "moduleName": "AccessoQueueing",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Attraction",
+        "printedName": "Attraction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV4nameSSvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV4nameSSvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV4nameSSvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV4nameSSvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV11descriptionSSvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV11descriptionSSvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV11descriptionSSvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV11descriptionSSvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "restrictions",
+            "printedName": "restrictions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV12restrictionsSaySSGvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV12restrictionsSaySSGvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV12restrictionsSaySSGvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV12restrictionsSaySSGvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV2idSSvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV2idSSvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV2idSSvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV2idSSvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV5stateSSvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV5stateSSvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV5stateSSvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV5stateSSvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "waitTimeInMinutes",
+            "printedName": "waitTimeInMinutes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV17waitTimeInMinutesSdvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV17waitTimeInMinutesSdvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV17waitTimeInMinutesSdvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV17waitTimeInMinutesSdvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "thumbnailImage",
+            "printedName": "thumbnailImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV14thumbnailImage10Foundation3URLVvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV14thumbnailImage10Foundation3URLVvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV14thumbnailImage10Foundation3URLVvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV14thumbnailImage10Foundation3URLVvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reserveActions",
+            "printedName": "reserveActions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction.ReserveAction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReserveAction",
+                    "printedName": "AccessoQueueing.Attraction.ReserveAction",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing10AttractionV14reserveActionsSayAC13ReserveActionVGvp",
+            "mangledName": "$s15AccessoQueueing10AttractionV14reserveActionsSayAC13ReserveActionVGvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AccessoQueueing.Attraction.ReserveAction]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReserveAction",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing10AttractionV14reserveActionsSayAC13ReserveActionVGvg",
+                "mangledName": "$s15AccessoQueueing10AttractionV14reserveActionsSayAC13ReserveActionVGvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ReserveAction",
+            "printedName": "ReserveAction",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "data",
+                "printedName": "data",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ActionData",
+                    "printedName": "AccessoQueueing.Attraction.ReserveAction.ActionData",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV4dataAE0E4DataVvp",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV4dataAE0E4DataVvp",
+                "moduleName": "AccessoQueueing",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ActionData",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.ActionData",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV4dataAE0E4DataVvg",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV4dataAE0E4DataVvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV11descriptionSSvp",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV11descriptionSSvp",
+                "moduleName": "AccessoQueueing",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV11descriptionSSvg",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV11descriptionSSvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "id",
+                "printedName": "id",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV2idSSvp",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV2idSSvp",
+                "moduleName": "AccessoQueueing",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV2idSSvg",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV2idSSvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "inputRequirements",
+                "printedName": "inputRequirements",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AccessoQueueing.Attraction.ReserveAction.InputRequirement]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InputRequirement",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.InputRequirement",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV17inputRequirementsSayAE16InputRequirementVGvp",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV17inputRequirementsSayAE16InputRequirementVGvp",
+                "moduleName": "AccessoQueueing",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[AccessoQueueing.Attraction.ReserveAction.InputRequirement]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "InputRequirement",
+                            "printedName": "AccessoQueueing.Attraction.ReserveAction.InputRequirement",
+                            "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV17inputRequirementsSayAE16InputRequirementVGvg",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV17inputRequirementsSayAE16InputRequirementVGvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeDecl",
+                "name": "ActionData",
+                "printedName": "ActionData",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "key",
+                    "printedName": "key",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV3keySSvp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV0E4DataV3keySSvp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV3keySSvg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV0E4DataV3keySSvg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Constructor",
+                    "name": "init",
+                    "printedName": "init(key:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ActionData",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.ActionData",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Constructor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV3keyAGSS_tcfc",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV0E4DataV3keyAGSS_tcfc",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "init_kind": "Designated"
+                  },
+                  {
+                    "kind": "Constructor",
+                    "name": "init",
+                    "printedName": "init(from:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ActionData",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.ActionData",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Decoder",
+                        "printedName": "Swift.Decoder",
+                        "usr": "s:s7DecoderP"
+                      }
+                    ],
+                    "declKind": "Constructor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV4fromAGs7Decoder_p_tKcfc",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV0E4DataV4fromAGs7Decoder_p_tKcfc",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "throwing": true,
+                    "init_kind": "Designated"
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "encode",
+                    "printedName": "encode(to:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Encoder",
+                        "printedName": "Swift.Encoder",
+                        "usr": "s:s7EncoderP"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV6encode2toys7Encoder_p_tKF",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV0E4DataV6encode2toys7Encoder_p_tKF",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "throwing": true,
+                    "funcSelfKind": "NonMutating"
+                  }
+                ],
+                "declKind": "Struct",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV0E4DataV",
+                "moduleName": "AccessoQueueing",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Decodable",
+                    "printedName": "Decodable",
+                    "usr": "s:Se",
+                    "mangledName": "$sSe"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Encodable",
+                    "printedName": "Encodable",
+                    "usr": "s:SE",
+                    "mangledName": "$sSE"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeDecl",
+                "name": "InputRequirement",
+                "printedName": "InputRequirement",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "isRequired",
+                    "printedName": "isRequired",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV10isRequiredSbvp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV10isRequiredSbvp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV10isRequiredSbvg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV10isRequiredSbvg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "defaultValue",
+                    "printedName": "defaultValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV12defaultValueSivp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV12defaultValueSivp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV12defaultValueSivg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV12defaultValueSivg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "dataType",
+                    "printedName": "dataType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV8dataTypeSSvp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV8dataTypeSSvp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV8dataTypeSSvg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV8dataTypeSSvg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "description",
+                    "printedName": "description",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV11descriptionSSvp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV11descriptionSSvp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV11descriptionSSvg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV11descriptionSSvg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "maximum",
+                    "printedName": "maximum",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7maximumSivp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7maximumSivp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7maximumSivg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7maximumSivg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "id",
+                    "printedName": "id",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV2idSSvp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV2idSSvp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV2idSSvg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV2idSSvg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "title",
+                    "printedName": "title",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV5titleSSvp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV5titleSSvp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV5titleSSvg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV5titleSSvg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "minimum",
+                    "printedName": "minimum",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7minimumSivp",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7minimumSivp",
+                    "moduleName": "AccessoQueueing",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7minimumSivg",
+                        "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV7minimumSivg",
+                        "moduleName": "AccessoQueueing",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Constructor",
+                    "name": "init",
+                    "printedName": "init(isRequired:defaultValue:dataType:description:maximum:id:title:minimum:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InputRequirement",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.InputRequirement",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Constructor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV10isRequired12defaultValue8dataType11description7maximum2id5title7minimumAGSb_SiS2SSiS2SSitcfc",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV10isRequired12defaultValue8dataType11description7maximum2id5title7minimumAGSb_SiS2SSiS2SSitcfc",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "init_kind": "Designated"
+                  },
+                  {
+                    "kind": "Constructor",
+                    "name": "init",
+                    "printedName": "init(from:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InputRequirement",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.InputRequirement",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Decoder",
+                        "printedName": "Swift.Decoder",
+                        "usr": "s:s7DecoderP"
+                      }
+                    ],
+                    "declKind": "Constructor",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV4fromAGs7Decoder_p_tKcfc",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV4fromAGs7Decoder_p_tKcfc",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "throwing": true,
+                    "init_kind": "Designated"
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "encode",
+                    "printedName": "encode(to:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Encoder",
+                        "printedName": "Swift.Encoder",
+                        "usr": "s:s7EncoderP"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV6encode2toys7Encoder_p_tKF",
+                    "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV6encode2toys7Encoder_p_tKF",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "throwing": true,
+                    "funcSelfKind": "NonMutating"
+                  }
+                ],
+                "declKind": "Struct",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV",
+                "moduleName": "AccessoQueueing",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Decodable",
+                    "printedName": "Decodable",
+                    "usr": "s:Se",
+                    "mangledName": "$sSe"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Encodable",
+                    "printedName": "Encodable",
+                    "usr": "s:SE",
+                    "mangledName": "$sSE"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Identifiable",
+                    "printedName": "Identifiable",
+                    "children": [
+                      {
+                        "kind": "TypeWitness",
+                        "name": "ID",
+                        "printedName": "ID",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:s12IdentifiableP",
+                    "mangledName": "$ss12IdentifiableP"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(data:description:id:inputRequirements:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReserveAction",
+                    "printedName": "AccessoQueueing.Attraction.ReserveAction",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ActionData",
+                    "printedName": "AccessoQueueing.Attraction.ReserveAction.ActionData",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV0E4DataV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AccessoQueueing.Attraction.ReserveAction.InputRequirement]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InputRequirement",
+                        "printedName": "AccessoQueueing.Attraction.ReserveAction.InputRequirement",
+                        "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV16InputRequirementV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV4data11description2id17inputRequirementsA2E0E4DataV_S2SSayAE16InputRequirementVGtcfc",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV4data11description2id17inputRequirementsA2E0E4DataV_S2SSayAE16InputRequirementVGtcfc",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReserveAction",
+                    "printedName": "AccessoQueueing.Attraction.ReserveAction",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV6encode2toys7Encoder_p_tKF",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV",
+            "mangledName": "$s15AccessoQueueing10AttractionV13ReserveActionV",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Identifiable",
+                "printedName": "Identifiable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "ID",
+                    "printedName": "ID",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s12IdentifiableP",
+                "mangledName": "$ss12IdentifiableP"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:description:restrictions:id:state:waitTimeInMinutes:thumbnailImage:reserveActions:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Attraction",
+                "printedName": "AccessoQueueing.Attraction",
+                "usr": "s:15AccessoQueueing10AttractionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction.ReserveAction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReserveAction",
+                    "printedName": "AccessoQueueing.Attraction.ReserveAction",
+                    "usr": "s:15AccessoQueueing10AttractionV13ReserveActionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing10AttractionV4name11description12restrictions2id5state17waitTimeInMinutes14thumbnailImage14reserveActionsACSS_SSSaySSGS2SSd10Foundation3URLVSayAC13ReserveActionVGtcfc",
+            "mangledName": "$s15AccessoQueueing10AttractionV4name11description12restrictions2id5state17waitTimeInMinutes14thumbnailImage14reserveActionsACSS_SSSaySSGS2SSd10Foundation3URLVSayAC13ReserveActionVGtcfc",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Attraction",
+                "printedName": "AccessoQueueing.Attraction",
+                "usr": "s:15AccessoQueueing10AttractionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing10AttractionV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15AccessoQueueing10AttractionV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing10AttractionV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15AccessoQueueing10AttractionV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15AccessoQueueing10AttractionV",
+        "mangledName": "$s15AccessoQueueing10AttractionV",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReservationAction",
+        "printedName": "ReservationAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing17ReservationActionV2idSSvp",
+            "mangledName": "$s15AccessoQueueing17ReservationActionV2idSSvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing17ReservationActionV2idSSvg",
+                "mangledName": "$s15AccessoQueueing17ReservationActionV2idSSvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationActionData",
+                "printedName": "AccessoQueueing.ReservationActionData",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing17ReservationActionV4dataAA0cD4DataVvp",
+            "mangledName": "$s15AccessoQueueing17ReservationActionV4dataAA0cD4DataVvp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReservationActionData",
+                    "printedName": "AccessoQueueing.ReservationActionData",
+                    "usr": "s:15AccessoQueueing21ReservationActionDataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing17ReservationActionV4dataAA0cD4DataVvg",
+                "mangledName": "$s15AccessoQueueing17ReservationActionV4dataAA0cD4DataVvg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationActionData",
+                "printedName": "AccessoQueueing.ReservationActionData",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing17ReservationActionV2id4dataACSS_AA0cD4DataVtcfc",
+            "mangledName": "$s15AccessoQueueing17ReservationActionV2id4dataACSS_AA0cD4DataVtcfc",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing17ReservationActionV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15AccessoQueueing17ReservationActionV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing17ReservationActionV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15AccessoQueueing17ReservationActionV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15AccessoQueueing17ReservationActionV",
+        "mangledName": "$s15AccessoQueueing17ReservationActionV",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReservationActionData",
+        "printedName": "ReservationActionData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "seatRow",
+            "printedName": "seatRow",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing21ReservationActionDataV7seatRowSivp",
+            "mangledName": "$s15AccessoQueueing21ReservationActionDataV7seatRowSivp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV7seatRowSivg",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV7seatRowSivg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "seatNum",
+            "printedName": "seatNum",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing21ReservationActionDataV7seatNumSivp",
+            "mangledName": "$s15AccessoQueueing21ReservationActionDataV7seatNumSivp",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV7seatNumSivg",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV7seatNumSivg",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(seatRow:seatNum:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationActionData",
+                "printedName": "AccessoQueueing.ReservationActionData",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing21ReservationActionDataV7seatRow0F3NumACSi_Sitcfc",
+            "mangledName": "$s15AccessoQueueing21ReservationActionDataV7seatRow0F3NumACSi_Sitcfc",
+            "moduleName": "AccessoQueueing",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CodingKeys",
+            "printedName": "CodingKeys",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "seatRow",
+                "printedName": "seatRow",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AccessoQueueing.ReservationActionData.CodingKeys.Type) -> AccessoQueueing.ReservationActionData.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                        "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                            "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO7seatRowyA2EmF",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO7seatRowyA2EmF",
+                "moduleName": "AccessoQueueing",
+                "fixedbinaryorder": 0
+              },
+              {
+                "kind": "Var",
+                "name": "seatNum",
+                "printedName": "seatNum",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AccessoQueueing.ReservationActionData.CodingKeys.Type) -> AccessoQueueing.ReservationActionData.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                        "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                            "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO7seatNumyA2EmF",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO7seatNumyA2EmF",
+                "moduleName": "AccessoQueueing",
+                "fixedbinaryorder": 1
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoQueueing.ReservationActionData.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                        "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO8rawValueAESgSS_tcfc",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO8rawValueAESgSS_tcfc",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO8rawValueSSvp",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO8rawValueSSvp",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO8rawValueSSvg",
+                    "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO8rawValueSSvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "stringValue",
+                "printedName": "stringValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO11stringValueSSvp",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO11stringValueSSvp",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO11stringValueSSvg",
+                    "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO11stringValueSSvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(stringValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoQueueing.ReservationActionData.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                        "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO11stringValueAESgSS_tcfc",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO11stringValueAESgSS_tcfc",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "intValue",
+                "printedName": "intValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO8intValueSiSgvp",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO8intValueSiSgvp",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Int?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO8intValueSiSgvg",
+                    "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO8intValueSiSgvg",
+                    "moduleName": "AccessoQueueing",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(intValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AccessoQueueing.ReservationActionData.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "AccessoQueueing.ReservationActionData.CodingKeys",
+                        "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO8intValueAESgSi_tcfc",
+                "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO8intValueAESgSi_tcfc",
+                "moduleName": "AccessoQueueing",
+                "implicit": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:15AccessoQueueing21ReservationActionDataV10CodingKeysO",
+            "mangledName": "$s15AccessoQueueing21ReservationActionDataV10CodingKeysO",
+            "moduleName": "AccessoQueueing",
+            "enumRawTypeName": "String",
+            "isEnumExhaustive": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CodingKey",
+                "printedName": "CodingKey",
+                "usr": "s:s9CodingKeyP",
+                "mangledName": "$ss9CodingKeyP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationActionData",
+                "printedName": "AccessoQueueing.ReservationActionData",
+                "usr": "s:15AccessoQueueing21ReservationActionDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing21ReservationActionDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15AccessoQueueing21ReservationActionDataV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing21ReservationActionDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15AccessoQueueing21ReservationActionDataV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15AccessoQueueing21ReservationActionDataV",
+        "mangledName": "$s15AccessoQueueing21ReservationActionDataV",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QueueingEndpoints",
+        "printedName": "QueueingEndpoints",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "getAttractions",
+            "printedName": "getAttractions",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoQueueing.QueueingEndpoints.Type) -> AccessoQueueing.QueueingEndpoints",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QueueingEndpoints",
+                    "printedName": "AccessoQueueing.QueueingEndpoints",
+                    "usr": "s:15AccessoQueueing0B9EndpointsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoQueueing.QueueingEndpoints.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "QueueingEndpoints",
+                        "printedName": "AccessoQueueing.QueueingEndpoints",
+                        "usr": "s:15AccessoQueueing0B9EndpointsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AccessoQueueing0B9EndpointsO14getAttractionsyA2CmF",
+            "mangledName": "$s15AccessoQueueing0B9EndpointsO14getAttractionsyA2CmF",
+            "moduleName": "AccessoQueueing",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "getAttractionWithId",
+            "printedName": "getAttractionWithId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoQueueing.QueueingEndpoints.Type) -> (Swift.String) -> AccessoQueueing.QueueingEndpoints",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> AccessoQueueing.QueueingEndpoints",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "QueueingEndpoints",
+                        "printedName": "AccessoQueueing.QueueingEndpoints",
+                        "usr": "s:15AccessoQueueing0B9EndpointsO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(attractionId: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoQueueing.QueueingEndpoints.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "QueueingEndpoints",
+                        "printedName": "AccessoQueueing.QueueingEndpoints",
+                        "usr": "s:15AccessoQueueing0B9EndpointsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AccessoQueueing0B9EndpointsO19getAttractionWithIdyACSS_tcACmF",
+            "mangledName": "$s15AccessoQueueing0B9EndpointsO19getAttractionWithIdyACSS_tcACmF",
+            "moduleName": "AccessoQueueing",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "reserveAction",
+            "printedName": "reserveAction",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AccessoQueueing.QueueingEndpoints.Type) -> AccessoQueueing.QueueingEndpoints",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QueueingEndpoints",
+                    "printedName": "AccessoQueueing.QueueingEndpoints",
+                    "usr": "s:15AccessoQueueing0B9EndpointsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AccessoQueueing.QueueingEndpoints.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "QueueingEndpoints",
+                        "printedName": "AccessoQueueing.QueueingEndpoints",
+                        "usr": "s:15AccessoQueueing0B9EndpointsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AccessoQueueing0B9EndpointsO13reserveActionyA2CmF",
+            "mangledName": "$s15AccessoQueueing0B9EndpointsO13reserveActionyA2CmF",
+            "moduleName": "AccessoQueueing",
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing0B9EndpointsO4pathSSvp",
+            "mangledName": "$s15AccessoQueueing0B9EndpointsO4pathSSvp",
+            "moduleName": "AccessoQueueing",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AccessoQueueing0B9EndpointsO4pathSSvg",
+                "mangledName": "$s15AccessoQueueing0B9EndpointsO4pathSSvg",
+                "moduleName": "AccessoQueueing",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getUrl",
+            "printedName": "getUrl(config:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoCore.Configuration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Configuration",
+                    "printedName": "AccessoCore.Configuration",
+                    "usr": "s:11AccessoCore13ConfigurationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B9EndpointsO6getUrl6configSS0A4Core13ConfigurationVSg_tF",
+            "mangledName": "$s15AccessoQueueing0B9EndpointsO6getUrl6configSS0A4Core13ConfigurationVSg_tF",
+            "moduleName": "AccessoQueueing",
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15AccessoQueueing0B9EndpointsO",
+        "mangledName": "$s15AccessoQueueing0B9EndpointsO",
+        "moduleName": "AccessoQueueing",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AccessoCore",
+        "printedName": "AccessoCore",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QueueingRemoteDataHandler",
+        "printedName": "QueueingRemoteDataHandler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "networkSession",
+            "printedName": "networkSession",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkSessionProviding",
+                "printedName": "AccessoCore.NetworkSessionProviding",
+                "usr": "s:11AccessoCore23NetworkSessionProvidingP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC14networkSession33_C6E1191C7E27677C1D723CA99A90C120LL0A4Core07NetworkG9Providing_pvp",
+            "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerC14networkSession33_C6E1191C7E27677C1D723CA99A90C120LL0A4Core07NetworkG9Providing_pvp",
+            "moduleName": "AccessoQueueing",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "errorNetworkLogParam",
+            "printedName": "errorNetworkLogParam",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LogParameters",
+                "printedName": "AccessoCore.LogParameters",
+                "usr": "s:11AccessoCore13LogParametersV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC20errorNetworkLogParam33_C6E1191C7E27677C1D723CA99A90C120LL0A4Core0H10ParametersVvp",
+            "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerC20errorNetworkLogParam33_C6E1191C7E27677C1D723CA99A90C120LL0A4Core0H10ParametersVvp",
+            "moduleName": "AccessoQueueing",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Function",
+            "name": "getAttractions",
+            "printedName": "getAttractions()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC14getAttractionsSayAA10AttractionVGyYaKF",
+            "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerC14getAttractionsSayAA10AttractionVGyYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAttraction",
+            "printedName": "getAttraction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoQueueing.Attraction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC13getAttractionyAA0G0VSgSSYaKF",
+            "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerC13getAttractionyAA0G0VSgSSYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reserveAction",
+            "printedName": "reserveAction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC13reserveActionyyAA011ReservationG0VYaKF",
+            "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerC13reserveActionyyAA011ReservationG0VYaKF",
+            "moduleName": "AccessoQueueing",
+            "isOpen": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QueueingRemoteDataHandler",
+                "printedName": "AccessoQueueing.QueueingRemoteDataHandler",
+                "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AccessoQueueing0B17RemoteDataHandlerCACycfc",
+            "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerCACycfc",
+            "moduleName": "AccessoQueueing",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15AccessoQueueing0B17RemoteDataHandlerC",
+        "mangledName": "$s15AccessoQueueing0B17RemoteDataHandlerC",
+        "moduleName": "AccessoQueueing",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "QueueingRemoteDataHandling",
+            "printedName": "QueueingRemoteDataHandling",
+            "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP",
+            "mangledName": "$s15AccessoQueueing0B18RemoteDataHandlingP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QueueingRemoteDataHandling",
+        "printedName": "QueueingRemoteDataHandling",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getAttractions",
+            "printedName": "getAttractions()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP14getAttractionsSayAA10AttractionVGyYaKF",
+            "mangledName": "$s15AccessoQueueing0B18RemoteDataHandlingP14getAttractionsSayAA10AttractionVGyYaKF",
+            "moduleName": "AccessoQueueing",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoQueueing.QueueingRemoteDataHandling>",
+            "sugared_genericSig": "<Self where Self : AccessoQueueing.QueueingRemoteDataHandling>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAttraction",
+            "printedName": "getAttraction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoQueueing.Attraction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP13getAttractionyAA0G0VSgSSYaKF",
+            "mangledName": "$s15AccessoQueueing0B18RemoteDataHandlingP13getAttractionyAA0G0VSgSSYaKF",
+            "moduleName": "AccessoQueueing",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoQueueing.QueueingRemoteDataHandling>",
+            "sugared_genericSig": "<Self where Self : AccessoQueueing.QueueingRemoteDataHandling>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reserveAction",
+            "printedName": "reserveAction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP13reserveActionyyAA011ReservationG0VYaKF",
+            "mangledName": "$s15AccessoQueueing0B18RemoteDataHandlingP13reserveActionyyAA011ReservationG0VYaKF",
+            "moduleName": "AccessoQueueing",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoQueueing.QueueingRemoteDataHandling>",
+            "sugared_genericSig": "<Self where Self : AccessoQueueing.QueueingRemoteDataHandling>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15AccessoQueueing0B18RemoteDataHandlingP",
+        "mangledName": "$s15AccessoQueueing0B18RemoteDataHandlingP",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QueueingProviding",
+        "printedName": "QueueingProviding",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getAttractions",
+            "printedName": "getAttractions()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AccessoQueueing.Attraction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B9ProvidingP14getAttractionsSayAA10AttractionVGyYaKF",
+            "mangledName": "$s15AccessoQueueing0B9ProvidingP14getAttractionsSayAA10AttractionVGyYaKF",
+            "moduleName": "AccessoQueueing",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoQueueing.QueueingProviding>",
+            "sugared_genericSig": "<Self where Self : AccessoQueueing.QueueingProviding>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAttraction",
+            "printedName": "getAttraction(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AccessoQueueing.Attraction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attraction",
+                    "printedName": "AccessoQueueing.Attraction",
+                    "usr": "s:15AccessoQueueing10AttractionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B9ProvidingP13getAttraction4withAA0E0VSgSS_tYaKF",
+            "mangledName": "$s15AccessoQueueing0B9ProvidingP13getAttraction4withAA0E0VSgSS_tYaKF",
+            "moduleName": "AccessoQueueing",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoQueueing.QueueingProviding>",
+            "sugared_genericSig": "<Self where Self : AccessoQueueing.QueueingProviding>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reserveAction",
+            "printedName": "reserveAction(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReservationAction",
+                "printedName": "AccessoQueueing.ReservationAction",
+                "usr": "s:15AccessoQueueing17ReservationActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AccessoQueueing0B9ProvidingP13reserveAction4withyAA011ReservationE0V_tYaKF",
+            "mangledName": "$s15AccessoQueueing0B9ProvidingP13reserveAction4withyAA011ReservationE0V_tYaKF",
+            "moduleName": "AccessoQueueing",
+            "genericSig": "<τ_0_0 where τ_0_0 : AccessoQueueing.QueueingProviding>",
+            "sugared_genericSig": "<Self where Self : AccessoQueueing.QueueingProviding>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15AccessoQueueing0B9ProvidingP",
+        "mangledName": "$s15AccessoQueueing0B9ProvidingP",
+        "moduleName": "AccessoQueueing",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Models\/ReservationAction.swift",
+      "kind": "StringLiteral",
+      "offset": 1086,
+      "length": 10,
+      "value": "\"seat_row\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Models\/ReservationAction.swift",
+      "kind": "StringLiteral",
+      "offset": 1120,
+      "length": 10,
+      "value": "\"seat_num\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Models\/ReservationAction.swift",
+      "kind": "StringLiteral",
+      "offset": 1086,
+      "length": 10,
+      "value": "\"seat_row\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Models\/ReservationAction.swift",
+      "kind": "StringLiteral",
+      "offset": 1120,
+      "length": 10,
+      "value": "\"seat_num\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 327,
+      "length": 17,
+      "value": "\"\/v1\/attractions\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 417,
+      "length": 33,
+      "value": "\"\/v1\/attractions\/\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 449,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 499,
+      "length": 19,
+      "value": "\"\/v1\/reserveAction\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 652,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1448,
+      "length": 3,
+      "value": "404"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 1637,
+      "length": 23,
+      "value": "\"Attractions Not Found\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "Array",
+      "offset": 1716,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 1777,
+      "length": 40,
+      "value": "\"There was an issue getting Attractions\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 2059,
+      "length": 26,
+      "value": "\"Bad Response for: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 2084,
+      "length": 36,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3076,
+      "length": 3,
+      "value": "404"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 3265,
+      "length": 23,
+      "value": "\"Attractions Not Found\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 3406,
+      "length": 39,
+      "value": "\"There was an issue getting Attraction\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 3687,
+      "length": 26,
+      "value": "\"Bad Response for: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 3712,
+      "length": 36,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4586,
+      "length": 3,
+      "value": "404"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 4775,
+      "length": 23,
+      "value": "\"Attractions Not Found\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 4957,
+      "length": 30,
+      "value": "\"There was an issue reserving\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 5229,
+      "length": 26,
+      "value": "\"Bad Response for: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/accesso-sdk-ios\/accesso-sdk-ios\/accesso-queueing\/AccessoQueueing\/Source\/Data\/Remote\/QueueingRemoteDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 5254,
+      "length": 36,
+      "value": "\"\""
+    }
+  ]
+}

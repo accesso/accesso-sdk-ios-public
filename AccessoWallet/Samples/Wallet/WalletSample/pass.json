@@ -1,0 +1,59 @@
+{
+    "description": "description",
+    "backgroundColor": "rgb(13,151,214)",
+    "logoText": "logoText",
+    "appLaunchURL": "https://url.com",
+    "associatedStoreIdentifiers": [1, 2],
+    "groupingIdentifier": "groupID",
+    "foregroundColor": "rgb(255,255,255)",
+    "labelColor": "rgb(35,42,90)",
+    "passDetails": {
+        "headerFields": [
+            {
+                "key": "Header1",
+                "value": "Value",
+                "label": "Header 1"
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key": "Aux1",
+                "value": "Value",
+                "label": "Auxiliary 1"
+            }
+        ],
+        "primaryFields": [
+            {
+                "key": "Primary1",
+                "value": "Value",
+                "label": "Primary 1"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "Secondary1",
+                "value": "Value",
+                "label": "Secondary 1"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "back1",
+                "value": "Value",
+                "label": "Back 1"
+            },
+            {
+                "key": "back2",
+                "value": "Value",
+                "label": "Back 2"
+            }
+        ]
+    },
+    "barcodes" : [
+        {
+            "message" : "123456789",
+            "format" : "PKBarcodeFormatPDF417",
+            "messageEncoding" : "iso-8859-1"
+        }
+    ]
+}

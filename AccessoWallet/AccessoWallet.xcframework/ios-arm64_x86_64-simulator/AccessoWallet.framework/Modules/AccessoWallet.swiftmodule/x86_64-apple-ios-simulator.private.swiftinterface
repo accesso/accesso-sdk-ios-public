@@ -1,0 +1,243 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoWallet
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AccessoCore
+import Foundation
+import PassKit
+import Swift
+import SwiftUI
+import _Concurrency
+import _PassKit_SwiftUI
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct WalletPass : Swift.Codable {
+  public var name: Swift.String
+  public var passType: AccessoWallet.PassType
+  public var walletData: AccessoWallet.WalletData
+  public var logo: Swift.String?
+  public var icon: Swift.String
+  public var strip: Swift.String?
+  public var background: Swift.String?
+  public var thumbnail: Swift.String?
+  public init(name: Swift.String, passType: AccessoWallet.PassType, walletData: AccessoWallet.WalletData, logo: Swift.String? = nil, icon: Swift.String? = nil, strip: Swift.String? = nil, background: Swift.String? = nil, thumbnail: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PassType : Swift.String, Swift.Codable, Swift.CaseIterable, Swift.Identifiable {
+  public var id: AccessoWallet.PassType {
+    get
+  }
+  case eventTicket
+  case generic
+  case coupon
+  case storeCard
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AccessoWallet.PassType]
+  public typealias ID = AccessoWallet.PassType
+  public typealias RawValue = Swift.String
+  public static var allCases: [AccessoWallet.PassType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct WalletData : Swift.Codable {
+  public var description: Swift.String
+  public var appLaunchURL: Swift.String?
+  public var associatedStoreIdentifiers: [Swift.Int]?
+  public var userInfo: [Swift.String : Swift.String]
+  public var expirationDate: Swift.String?
+  public var voided: Swift.Bool?
+  public var beacons: [AccessoWallet.WalletBeacon]?
+  public var locations: [AccessoWallet.WalletLocation]?
+  public var maxDistance: Swift.Int?
+  public var relevantDate: Swift.String?
+  public var passDetails: AccessoWallet.WalletPassStructure?
+  public var barcodes: [AccessoWallet.WalletBarcode]?
+  public var backgroundColor: Swift.String?
+  public var foregroundColor: Swift.String?
+  public var groupingIdentifier: Swift.String?
+  public var labelColor: Swift.String?
+  public var logoText: Swift.String?
+  public var nfc: [AccessoWallet.WalletNFC]?
+  public init(description: Swift.String, appLaunchURL: Swift.String? = nil, associatedStoreIdentifiers: [Swift.Int]? = nil, userInfo: [Swift.String : Swift.String]? = nil, expirationDate: Swift.String? = nil, voided: Swift.Bool? = nil, beacons: [AccessoWallet.WalletBeacon]? = nil, locations: [AccessoWallet.WalletLocation]? = nil, maxDistance: Swift.Int? = nil, relevantDate: Swift.String? = nil, passDetails: AccessoWallet.WalletPassStructure? = nil, barcodes: [AccessoWallet.WalletBarcode]? = nil, backgroundColor: Swift.String? = nil, foregroundColor: Swift.String? = nil, groupingIdentifier: Swift.String? = nil, labelColor: Swift.String? = nil, logoText: Swift.String? = nil, nfc: [AccessoWallet.WalletNFC]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WalletPassStructure : Swift.Codable {
+  public var auxiliaryFields: [AccessoWallet.WalletFields]
+  public var backFields: [AccessoWallet.WalletFields]
+  public var headerFields: [AccessoWallet.WalletFields]
+  public var primaryFields: [AccessoWallet.WalletFields]
+  public var secondaryFields: [AccessoWallet.WalletFields]
+  public init(auxiliaryFields: [AccessoWallet.WalletFields] = [], backFields: [AccessoWallet.WalletFields] = [], headerFields: [AccessoWallet.WalletFields] = [], primaryFields: [AccessoWallet.WalletFields] = [], secondaryFields: [AccessoWallet.WalletFields] = [])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WalletBeacon : Swift.Codable {
+  public var proximityUUID: Swift.String
+  public var major: Swift.UInt16?
+  public var minor: Swift.UInt16?
+  public var relevantText: Swift.String?
+  public init(proximityUUID: Swift.String, major: Swift.UInt16? = nil, minor: Swift.UInt16? = nil, relevantText: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WalletLocation : Swift.Codable {
+  public var latitude: Swift.Double
+  public var longitude: Swift.Double
+  public var altitude: Swift.Double?
+  public var relevantText: Swift.String?
+  public init(latitude: Swift.Double, longitude: Swift.Double, altitude: Swift.Double? = nil, relevantText: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WalletBarcode : Swift.Codable {
+  public var format: AccessoWallet.BarcodeFormat
+  public var message: Swift.String
+  public var messageEncoding: Swift.String
+  public var altText: Swift.String?
+  public init(format: AccessoWallet.BarcodeFormat, message: Swift.String, messageEncoding: Swift.String = "iso-8859-1", altText: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WalletNFC : Swift.Codable {
+  public var message: Swift.String
+  public var encryptionPublicKey: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WalletFields : Swift.Codable {
+  public var attributedValue: Swift.String?
+  public var changeMessage: Swift.String?
+  public var dataDetectorTypes: [AccessoWallet.DataDetectorType]?
+  public var key: Swift.String
+  public var label: Swift.String?
+  public var textAlignment: AccessoWallet.TextAlignment?
+  public var value: Swift.String
+  public var dateStyle: AccessoWallet.WalletDateStyle?
+  public var ignoresTimeZone: Swift.Bool?
+  public var isRelative: Swift.Bool?
+  public var timeStyle: AccessoWallet.WalletDateStyle?
+  public var currencyCode: Swift.String?
+  public var numberStyle: AccessoWallet.WalletNumberStyle?
+  public init(attributedValue: Swift.String? = nil, changeMessage: Swift.String? = nil, dataDetectorTypes: [AccessoWallet.DataDetectorType]? = nil, key: Swift.String, label: Swift.String? = nil, textAlignment: AccessoWallet.TextAlignment? = nil, value: Swift.String, dateStyle: AccessoWallet.WalletDateStyle? = nil, ignoresTimeZone: Swift.Bool? = nil, isRelative: Swift.Bool? = nil, timeStyle: AccessoWallet.WalletDateStyle? = nil, currencyCode: Swift.String? = nil, numberStyle: AccessoWallet.WalletNumberStyle? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum WalletDateStyle : Swift.String, Swift.Codable {
+  case none
+  case short
+  case medium
+  case long
+  case full
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WalletNumberStyle : Swift.String, Swift.Codable {
+  case decimal
+  case percent
+  case scientific
+  case spellOut
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BarcodeFormat : Swift.String, Swift.Codable {
+  case qrCode
+  case pdf
+  case aztec
+  case code128
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TextAlignment : Swift.String, Swift.Codable {
+  case left
+  case center
+  case right
+  case natural
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DataDetectorType : Swift.String, Swift.Codable {
+  case phoneNumber
+  case link
+  case address
+  case calendarEvent
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol WalletProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  func uploadPass(_ pass: AccessoWallet.WalletPass) async throws -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func downloadPass(passName: Swift.String) async throws -> PassKit.PKPass?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func updatePass() async throws
+  #endif
+}
+public struct AddPassView : SwiftUI.UIViewControllerRepresentable {
+  public typealias UIViewControllerType = PassKit.PKAddPassesViewController
+  public var pass: PassKit.PKPass
+  public init(pass: PassKit.PKPass)
+  @_Concurrency.MainActor(unsafe) public func makeUIViewController(context: AccessoWallet.AddPassView.Context) -> PassKit.PKAddPassesViewController
+  @_Concurrency.MainActor(unsafe) public func updateUIViewController(_ uiViewController: PassKit.PKAddPassesViewController, context: AccessoWallet.AddPassView.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+}
+public struct AddToWalletButton : SwiftUI.View {
+  public init(pass: AccessoWallet.WalletPass)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s13AccessoWallet05AddToB6ButtonV4bodyQrvp", 0) __
+}
+@_hasMissingDesignatedInitializers public class WalletProvider : AccessoWallet.WalletProviding {
+  public static let shared: AccessoWallet.WalletProvider
+  #if compiler(>=5.3) && $AsyncAwait
+  public func uploadPass(_ pass: AccessoWallet.WalletPass) async throws -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func downloadPass(passName: Swift.String) async throws -> PassKit.PKPass?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updatePass() async throws
+  #endif
+  @objc deinit
+}
+extension AccessoWallet.PassType : Swift.Equatable {}
+extension AccessoWallet.PassType : Swift.Hashable {}
+extension AccessoWallet.PassType : Swift.RawRepresentable {}
+extension AccessoWallet.WalletDateStyle : Swift.Equatable {}
+extension AccessoWallet.WalletDateStyle : Swift.Hashable {}
+extension AccessoWallet.WalletDateStyle : Swift.RawRepresentable {}
+extension AccessoWallet.WalletNumberStyle : Swift.Equatable {}
+extension AccessoWallet.WalletNumberStyle : Swift.Hashable {}
+extension AccessoWallet.WalletNumberStyle : Swift.RawRepresentable {}
+extension AccessoWallet.BarcodeFormat : Swift.Equatable {}
+extension AccessoWallet.BarcodeFormat : Swift.Hashable {}
+extension AccessoWallet.BarcodeFormat : Swift.RawRepresentable {}
+extension AccessoWallet.TextAlignment : Swift.Equatable {}
+extension AccessoWallet.TextAlignment : Swift.Hashable {}
+extension AccessoWallet.TextAlignment : Swift.RawRepresentable {}
+extension AccessoWallet.DataDetectorType : Swift.Equatable {}
+extension AccessoWallet.DataDetectorType : Swift.Hashable {}
+extension AccessoWallet.DataDetectorType : Swift.RawRepresentable {}

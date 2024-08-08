@@ -1,0 +1,703 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AccessoExperiencePromoter
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AccessoCore
+import CoreLocation
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol ExperiencePromoterProviding {
+  var pushDeviceToken: Swift.String? { get set }
+  var beaconListenerStatus: AccessoExperiencePromoter.BeaconListenerStatus { get set }
+  var beaconDetection: ((AccessoExperiencePromoter.BeaconRegion) -> Swift.Void)? { get set }
+  #if compiler(>=5.3) && $AsyncAwait
+  func getMessages(venueId: Swift.String?) async throws -> [AccessoExperiencePromoter.Message]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func trackMessageAction(messageEvent: AccessoExperiencePromoter.MessageEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func trackMessageLinkTapped(messageLinkTappedEvent: AccessoExperiencePromoter.MessageLinkTappedEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func trackAppNotificationState(appNotificationStateEvent: AccessoExperiencePromoter.AppNotificationStateEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getMessageById(messageId: Swift.String) async throws -> AccessoExperiencePromoter.Message
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func trackBeaconDetectChange(beaconStatus: AccessoExperiencePromoter.BeaconStatus, beaconEvent: AccessoExperiencePromoter.BeaconEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getBeaconRegions() async throws -> [AccessoExperiencePromoter.BeaconRegion]
+  #endif
+  func startListeningForBeaconRegions(beaconRegions: [AccessoExperiencePromoter.BeaconRegion])
+  func stopListeningForBeaconRegions(beaconRegions: [AccessoExperiencePromoter.BeaconRegion]?)
+  #if compiler(>=5.3) && $AsyncAwait
+  func getPointsOfInterest() async throws -> [AccessoExperiencePromoter.PointOfInterest]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getDisplayCategories() async throws -> AccessoExperiencePromoter.DisplayCategories
+  #endif
+  func searchPointsOfInterest(pointsOfInterest: [AccessoExperiencePromoter.PointOfInterest], searchCriteria: Swift.String) -> [AccessoExperiencePromoter.PointOfInterest]
+  func filterPointsOfInterestByCategories(categories: [AccessoExperiencePromoter.Category], pointsOfInterest: [AccessoExperiencePromoter.PointOfInterest]) -> [AccessoExperiencePromoter.PointOfInterest]
+  func promptForLocationPermission()
+  func startUpdatingLocation(for distanceInMeters: CoreLocation.CLLocationDistance, timeInterval: Foundation.TimeInterval)
+  #if compiler(>=5.3) && $AsyncAwait
+  func trackDeviceLocation(locationInfo: AccessoExperiencePromoter.LocationInfo) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func updatePushDeviceToken(pushDeviceToken: Swift.String) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getEvents() async throws -> [AccessoExperiencePromoter.Event]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getEventSchedules() async throws -> [AccessoExperiencePromoter.Schedule]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getTrendingEvents() async throws -> [AccessoExperiencePromoter.Event]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func getFeaturedEvents() async throws -> [AccessoExperiencePromoter.Event]
+  #endif
+  func getEventById(eventId: Swift.String, events: [AccessoExperiencePromoter.Event]) -> AccessoExperiencePromoter.Event?
+  #if compiler(>=5.3) && $AsyncAwait
+  func getEventCategories() async throws -> [AccessoExperiencePromoter.EventCategory]
+  #endif
+  func filterEventsByCategories(_ events: [AccessoExperiencePromoter.Event], categories: [AccessoExperiencePromoter.EventCategory]) -> [AccessoExperiencePromoter.Event]
+  func filterEventsByDateRange(_ events: [AccessoExperiencePromoter.Event], interval: Foundation.DateInterval) -> [AccessoExperiencePromoter.Event]
+}
+public enum BeaconStatus : Swift.String, Swift.Codable {
+  case ENTER
+  case EXIT
+  case NONE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct BeaconEvent : Swift.Codable {
+  public var appId: Swift.String?
+  public var appUserId: Swift.String?
+  public var appVersion: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var beacons: [AccessoExperiencePromoter.BeaconRegion]?
+  public init(appId: Swift.String? = nil, appUserId: Swift.String? = nil, appVersion: Swift.String? = nil, timestamp: Foundation.Date? = nil, beacons: [AccessoExperiencePromoter.BeaconRegion]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BeaconRegion : Swift.Codable {
+  public var id: Swift.String {
+    get
+  }
+  public var proximityUUID: Swift.String
+  public var major: Swift.Int?
+  public var minor: Swift.Int?
+  public var mfrCode: Swift.String?
+  public var ttl: Swift.Int?
+  public var signalPower: Swift.Int?
+  public var outOfVenue: Swift.Bool?
+  public var beaconStatus: AccessoExperiencePromoter.BeaconStatus?
+  public init(proximityUUID: Swift.String, major: Swift.Int? = nil, minor: Swift.Int? = nil, mfrCode: Swift.String? = nil, ttl: Swift.Int? = nil, signalPower: Swift.Int? = nil, outOfVenue: Swift.Bool? = nil, beaconStatus: AccessoExperiencePromoter.BeaconStatus? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DisplayCategories : Swift.Codable {
+  public let categories: [AccessoExperiencePromoter.Category]
+  public let poi: [AccessoExperiencePromoter.PointOfInterest]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Category : Swift.Codable {
+  public let id: Swift.String
+  public let label: Swift.String?
+  public let poiDetailsTitle: Swift.String?
+  public let statusClosedMessage: Swift.String?
+  public let parent: Swift.String?
+  public let displayOrder: Swift.Int?
+  public let icons: [AccessoExperiencePromoter.Icon]?
+  public let activeIcons: [AccessoExperiencePromoter.Icon]?
+  public let poi: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Event : Swift.Codable, Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String
+  public let title: Swift.String
+  public let description: Swift.String?
+  public let suggestedArrival: Swift.String?
+  public let promoted: Swift.Bool?
+  public let callToAction: AccessoExperiencePromoter.Event.CallToAction?
+  public let associatedPois: [AccessoExperiencePromoter.Event.AssociatedPoi]?
+  public let displayCategories: [AccessoExperiencePromoter.Event.DisplayCategory]?
+  public let attributes: [AccessoExperiencePromoter.Event.Attribute]?
+  public let images: [AccessoExperiencePromoter.Event.EventImage]?
+  public let missingTranslations: [Swift.String]?
+  public var schedules: [AccessoExperiencePromoter.Schedule]?
+  public init(id: Swift.String, title: Swift.String, description: Swift.String? = nil, suggestedArrival: Swift.String? = nil, promoted: Swift.Bool? = nil, callToAction: AccessoExperiencePromoter.Event.CallToAction? = nil, associatedPois: [AccessoExperiencePromoter.Event.AssociatedPoi]? = nil, displayCategories: [AccessoExperiencePromoter.Event.DisplayCategory]? = nil, attributes: [AccessoExperiencePromoter.Event.Attribute]? = nil, images: [AccessoExperiencePromoter.Event.EventImage]? = nil, missingTranslations: [Swift.String]? = nil, schedules: [AccessoExperiencePromoter.Schedule]? = nil)
+  public struct CallToAction : Swift.Codable {
+    public let label: Swift.String?
+    public let link: Swift.String?
+    public let appNav: Swift.String?
+    public let type: Swift.String?
+    public let displayOrder: Swift.Int?
+    public init(label: Swift.String? = nil, link: Swift.String? = nil, appNav: Swift.String? = nil, type: Swift.String? = nil, displayOrder: Swift.Int? = nil)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct AssociatedPoi : Swift.Codable {
+    public let id: Swift.String
+    public init(id: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct EventImage : Swift.Codable {
+    public let src: Swift.String?
+    public let type: Swift.String?
+    public let crop: Swift.String?
+    public init(src: Swift.String? = nil, type: Swift.String? = nil, crop: Swift.String? = nil)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct Attribute : Swift.Codable {
+    public let label: Swift.String?
+    public let value: [AccessoExperiencePromoter.Event.AttributeValue]?
+    public let images: [AccessoExperiencePromoter.Event.EventImage]?
+    public init(label: Swift.String? = nil, value: [AccessoExperiencePromoter.Event.AttributeValue]? = nil, images: [AccessoExperiencePromoter.Event.EventImage]? = nil)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct AttributeValue : Swift.Codable {
+    public let label: Swift.String
+    public init(label: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct DisplayCategory : Swift.Codable {
+    public let id: Swift.String
+    public init(id: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public static func == (lhs: AccessoExperiencePromoter.Event, rhs: AccessoExperiencePromoter.Event) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func sortSchedulesBySoonestDate(_ schedules: [AccessoExperiencePromoter.Schedule]) -> [AccessoExperiencePromoter.Schedule]
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Schedule : Swift.Codable, Swift.Hashable {
+  public let eventId: Swift.String
+  public let start: Swift.String?
+  public let end: Swift.String?
+  public let timesDisplayedInVenue: Swift.Bool?
+  public let isFullDay: Swift.Bool?
+  public init(eventId: Swift.String, start: Swift.String? = nil, end: Swift.String? = nil, timesDisplayedInVenue: Swift.Bool? = nil, isFullDay: Swift.Bool? = nil)
+  public var formattedDateAndTime: Swift.String {
+    get
+  }
+  public var startDate: Foundation.Date? {
+    get
+  }
+  public var endDate: Foundation.Date? {
+    get
+  }
+  public var dateRange: Foundation.DateInterval? {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AccessoExperiencePromoter.Schedule, b: AccessoExperiencePromoter.Schedule) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EventsResponse : Swift.Codable {
+  public var events: [AccessoExperiencePromoter.Event]
+  public let schedules: [AccessoExperiencePromoter.Schedule]
+  public let featuredEvents: [AccessoExperiencePromoter.HighlightedEvent]
+  public let trendingEvents: [AccessoExperiencePromoter.HighlightedEvent]
+  public init(events: [AccessoExperiencePromoter.Event], schedules: [AccessoExperiencePromoter.Schedule], featuredEvents: [AccessoExperiencePromoter.HighlightedEvent], trendingEvents: [AccessoExperiencePromoter.HighlightedEvent])
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct HighlightedEvent : Swift.Codable {
+  public let eventId: Swift.String
+  public let scheduleInstances: [AccessoExperiencePromoter.HighlightedEvent.ScheduleInstance]?
+  public init(eventId: Swift.String, scheduleInstances: [AccessoExperiencePromoter.HighlightedEvent.ScheduleInstance]? = nil)
+  public struct ScheduleInstance : Swift.Codable {
+    public let start: Swift.String?
+    public let end: Swift.String?
+    public let timesDisplayedInVenue: Swift.Bool?
+    public let isFullDay: Swift.Bool?
+    public init(start: Swift.String? = nil, end: Swift.String? = nil, timesDisplayedInVenue: Swift.Bool? = nil, isFullDay: Swift.Bool? = nil)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EventCategory : Swift.Codable, Swift.Hashable, Swift.Identifiable {
+  public let displayMode: Swift.String?
+  public let displayOrder: Swift.Int
+  public let id: Swift.String
+  public let images: [AccessoExperiencePromoter.EventCategory.Image]
+  public let label: Swift.String
+  public let missingTranslations: [Swift.String]
+  public init(displayMode: Swift.String?, displayOrder: Swift.Int, id: Swift.String, images: [AccessoExperiencePromoter.EventCategory.Image], label: Swift.String, missingTranslations: [Swift.String])
+  public struct Image : Swift.Codable, Swift.Hashable {
+    public let alt: Swift.String?
+    public let crop: Swift.String?
+    public let height: Swift.Int?
+    public let src: Swift.String
+    public let type: Swift.String
+    public let width: Swift.Int?
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: AccessoExperiencePromoter.EventCategory.Image, b: AccessoExperiencePromoter.EventCategory.Image) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public static func == (lhs: AccessoExperiencePromoter.EventCategory, rhs: AccessoExperiencePromoter.EventCategory) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum BeaconListenerStatus {
+  case listening
+  case stopped
+  case unknown
+  public static func == (a: AccessoExperiencePromoter.BeaconListenerStatus, b: AccessoExperiencePromoter.BeaconListenerStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct RegionEvent : Swift.Codable {
+  public var appId: Swift.String?
+  public var appUserId: Swift.String?
+  public var platform: Swift.String?
+  public var pushDeviceToken: Swift.String?
+  public var userId: Swift.String?
+  public var location: AccessoExperiencePromoter.LocationInfo?
+  public init(appId: Swift.String? = nil, appUserId: Swift.String? = nil, platform: Swift.String? = "IOS", pushDeviceToken: Swift.String? = nil, userId: Swift.String? = nil, location: AccessoExperiencePromoter.LocationInfo? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LocationInfo : Swift.Codable {
+  public var lat: Swift.Double
+  public var lon: Swift.Double
+  public var horizontalAccuracy: Swift.Double
+  public var locationSource: Swift.String
+  public init(lat: Swift.Double, lon: Swift.Double, horizontalAccuracy: Swift.Double, locationSource: Swift.String = "DEVICE")
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Message : Swift.Codable {
+  public var id: Swift.String
+  public var subject: Swift.String?
+  public var body: Swift.String?
+  public var subTitle: Swift.String?
+  public var appUserId: Swift.String?
+  public var venueId: Swift.String?
+  public var type: Swift.Int?
+  public var publishTime: Foundation.Date?
+  public var publishTimestamp: Swift.String?
+  public var expireTime: Foundation.Date?
+  public var expireTimestamp: Swift.String?
+  public var experienceId: Swift.String?
+  public var experienceTitle: Swift.String?
+  public var isRead: Swift.Bool
+  public var images: [AccessoExperiencePromoter.MessageImage]?
+  public var links: [AccessoExperiencePromoter.Link]?
+  public var pushActioned: Swift.Bool
+  public init(id: Swift.String, subject: Swift.String? = nil, body: Swift.String? = nil, subTitle: Swift.String? = nil, appUserId: Swift.String? = nil, venueId: Swift.String? = nil, type: Swift.Int? = nil, publishTime: Foundation.Date? = nil, publishTimestamp: Swift.String? = nil, expireTime: Foundation.Date? = nil, expireTimestamp: Swift.String? = nil, experienceId: Swift.String? = nil, experienceTitle: Swift.String? = nil, isRead: Swift.Bool = false, images: [AccessoExperiencePromoter.MessageImage]? = nil, links: [AccessoExperiencePromoter.Link]? = nil, pushActioned: Swift.Bool = false)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension AccessoExperiencePromoter.Message : Swift.Hashable {
+  public static func == (lhs: AccessoExperiencePromoter.Message, rhs: AccessoExperiencePromoter.Message) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol EventCommonData : Swift.Decodable, Swift.Encodable {
+  var id: Swift.String { get set }
+  var appUserId: Swift.String? { get set }
+  var appId: Swift.String { get set }
+  var version: Swift.String { get set }
+  var platform: Swift.String { get set }
+  var timestamp: Swift.String? { get set }
+  var pushDeviceToken: Swift.String? { get set }
+  var venueId: Swift.String? { get set }
+}
+public struct MessageEvent : AccessoExperiencePromoter.EventCommonData {
+  public var id: Swift.String
+  public var appUserId: Swift.String?
+  public var appId: Swift.String
+  public var version: Swift.String
+  public var platform: Swift.String
+  public var timestamp: Swift.String?
+  public var pushDeviceToken: Swift.String?
+  public var venueId: Swift.String?
+  public var messageId: Swift.String
+  public var action: AccessoExperiencePromoter.MessageAction?
+  public var eventType: AccessoExperiencePromoter.MessageEventType
+  public init(id: Swift.String = UUID().uuidString, appUserId: Swift.String? = nil, appId: Swift.String, version: Swift.String = "2.0", platform: Swift.String = "iOS", timestamp: Swift.String? = nil, pushDeviceToken: Swift.String? = nil, venueId: Swift.String? = nil, messageId: Swift.String, action: AccessoExperiencePromoter.MessageAction? = nil, eventType: AccessoExperiencePromoter.MessageEventType = .message)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MessageLinkTappedEvent : AccessoExperiencePromoter.EventCommonData {
+  public var id: Swift.String
+  public var appUserId: Swift.String?
+  public var appId: Swift.String
+  public var version: Swift.String
+  public var platform: Swift.String
+  public var timestamp: Swift.String?
+  public var pushDeviceToken: Swift.String?
+  public var venueId: Swift.String?
+  public var messageId: Swift.String
+  public var linkId: Swift.String
+  public var linkType: Swift.String?
+  public var eventType: AccessoExperiencePromoter.MessageEventType
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AppNotificationStateEvent : AccessoExperiencePromoter.EventCommonData {
+  public var id: Swift.String
+  public var appUserId: Swift.String?
+  public var appId: Swift.String
+  public var version: Swift.String
+  public var platform: Swift.String
+  public var timestamp: Swift.String?
+  public var pushDeviceToken: Swift.String?
+  public var venueId: Swift.String?
+  public var state: AccessoExperiencePromoter.AppNotificationState
+  public var eventType: AccessoExperiencePromoter.MessageEventType
+  public init(id: Swift.String = UUID().uuidString, appUserId: Swift.String? = nil, appId: Swift.String, version: Swift.String = "2.0", platform: Swift.String = "iOS", timestamp: Swift.String? = nil, pushDeviceToken: Swift.String? = nil, venueId: Swift.String? = nil, state: AccessoExperiencePromoter.AppNotificationState = .disabled, eventType: AccessoExperiencePromoter.MessageEventType = .notificationState)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum MessageEventType : Swift.String, Swift.Codable {
+  case message
+  case messageLinkTapped
+  case notificationState
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MessageAction : Swift.String, Swift.Codable {
+  case pushWhileOpen
+  case pushWhileNotOpen
+  case read
+  case received
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Link : Swift.Codable {
+  public init(type: Swift.String? = nil, label: Swift.String? = nil, target: Swift.String? = nil, appNav: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MessageImage : Swift.Codable {
+  public var identifier: Swift.String?
+  public var height: Swift.Int?
+  public var width: Swift.Int?
+  public var resolution: Swift.String?
+  public var src: Swift.String?
+  public init(identifier: Swift.String? = nil, width: Swift.Int? = nil, height: Swift.Int? = nil, resolution: Swift.String? = nil, src: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum AppNotificationState : Swift.String, Swift.Codable {
+  case enabled
+  case disabled
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PointOfInterest : Swift.Codable, Swift.Identifiable {
+  public let id: Swift.String
+  public let label: Swift.String
+  public let description: Swift.String?
+  public let status: AccessoExperiencePromoter.PoiStatus?
+  public let images: [AccessoExperiencePromoter.PoiImage]?
+  public let details: [AccessoExperiencePromoter.PoiDetail]?
+  public let tags: [AccessoExperiencePromoter.PoiTag]?
+  public let location: AccessoExperiencePromoter.Location?
+  public let sticker: AccessoExperiencePromoter.Sticker?
+  public let layoutType: AccessoExperiencePromoter.LayoutType?
+  public let beacons: [AccessoExperiencePromoter.BeaconRegion]?
+  public let type: Swift.String?
+  public init(id: Swift.String, label: Swift.String, description: Swift.String? = nil, status: AccessoExperiencePromoter.PoiStatus? = nil, images: [AccessoExperiencePromoter.PoiImage]? = nil, details: [AccessoExperiencePromoter.PoiDetail]? = nil, tags: [AccessoExperiencePromoter.PoiTag]? = nil, location: AccessoExperiencePromoter.Location? = nil, sticker: AccessoExperiencePromoter.Sticker? = nil, layoutType: AccessoExperiencePromoter.LayoutType? = nil, beacons: [AccessoExperiencePromoter.BeaconRegion]? = nil, type: Swift.String? = nil)
+  public static func == (lhs: AccessoExperiencePromoter.PointOfInterest, rhs: AccessoExperiencePromoter.PointOfInterest) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Sticker : Swift.Codable {
+  public let id: Swift.String
+  public let label: Swift.String?
+  public let images: [AccessoExperiencePromoter.PoiImage]?
+  public init(id: Swift.String, label: Swift.String? = nil, images: [AccessoExperiencePromoter.PoiImage]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PoiImage : Swift.Codable {
+  public let resolution: AccessoExperiencePromoter.Resolution?
+  public let src: Swift.String?
+  public var height: Swift.Int16?
+  public var width: Swift.Int16?
+  public init(resolution: AccessoExperiencePromoter.Resolution? = nil, src: Swift.String? = nil, height: Swift.Int16? = nil, width: Swift.Int16? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PoiDetail : Swift.Codable {
+  public var id: Swift.String?
+  public var label: Swift.String?
+  public var description: Swift.String?
+  public var images: [AccessoExperiencePromoter.PoiImage]?
+  public init(id: Swift.String? = nil, label: Swift.String? = nil, description: Swift.String? = nil, images: [AccessoExperiencePromoter.PoiImage]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Icon : Swift.Codable {
+  public let resolution: AccessoExperiencePromoter.Resolution?
+  public let src: Swift.String?
+  public init(resolution: AccessoExperiencePromoter.Resolution? = nil, src: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Resolution : Swift.String, Swift.Codable {
+  case mdpi
+  case xhdpi
+  case xxxhdpi
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LayoutType : Swift.String, Swift.Codable {
+  case landmark
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Location : Swift.Codable {
+  public let horizontalAccuracy: Swift.Int?
+  public let lat: Swift.Double
+  public let lon: Swift.Double
+  public init(horizontalAccuracy: Swift.Int? = nil, lat: Swift.Double, lon: Swift.Double)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PoiTag : Swift.Codable {
+  public let name: Swift.String?
+  public let value: Swift.String?
+  public let label: Swift.String?
+  public let valueLabel: Swift.String?
+  public let uiVisible: Swift.Bool?
+  public let displayOrder: Swift.String?
+  public let icons: [AccessoExperiencePromoter.Icon]?
+  public let action: AccessoExperiencePromoter.PoiAction?
+  public init(name: Swift.String? = nil, value: Swift.String? = nil, label: Swift.String? = nil, valueLabel: Swift.String? = nil, uiVisible: Swift.Bool? = nil, displayOrder: Swift.String? = nil, icons: [AccessoExperiencePromoter.Icon]? = nil, action: AccessoExperiencePromoter.PoiAction? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PoiAction : Swift.Codable {
+  public let module: Swift.String
+  public let options: [Swift.String : Swift.String?]?
+  public init(module: Swift.String, options: [Swift.String : Swift.String?]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OperationalStatus : Swift.String, Swift.Codable {
+  case closed
+  case open
+  case down
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PoiStatus : Swift.Codable {
+  public let poiID: Swift.String?
+  public let externalKey: Swift.String?
+  public let isOpen: Swift.Bool
+  public let lastUpdateTime: Swift.String?
+  public let waitTime: Swift.Int?
+  public let lastChanged: Swift.String?
+  public let operationalStatus: AccessoExperiencePromoter.OperationalStatus?
+  public init(poiID: Swift.String? = nil, externalKey: Swift.String? = nil, isOpen: Swift.Bool, lastUpdateTime: Swift.String? = nil, waitTime: Swift.Int? = nil, lastChanged: Swift.String? = nil, operationalStatus: AccessoExperiencePromoter.OperationalStatus? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum TimeIntervalConstants {
+  public static let defaultLocationUpdateInterval: Swift.Double
+  public static let minimimLocationUpdateInterval: Swift.Double
+}
+extension AccessoExperiencePromoter.ExperiencePromoterProvider : CoreLocation.CLLocationManagerDelegate {
+  public func promptForLocationPermission()
+  public func startUpdatingLocation(for distanceInMeters: CoreLocation.CLLocationDistance = 5, timeInterval: Foundation.TimeInterval = TimeIntervalConstants.defaultLocationUpdateInterval)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func trackDeviceLocation(locationInfo: AccessoExperiencePromoter.LocationInfo) async throws
+  #endif
+  @objc dynamic public func locationManagerDidChangeAuthorization(_ manager: CoreLocation.CLLocationManager)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, monitoringDidFailFor region: CoreLocation.CLRegion?, withError error: any Swift.Error)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didStartMonitoringFor region: CoreLocation.CLRegion)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didDetermineState state: CoreLocation.CLRegionState, for region: CoreLocation.CLRegion)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didExitRegion region: CoreLocation.CLRegion)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ExperiencePromoterProvider : ObjectiveC.NSObject, AccessoExperiencePromoter.ExperiencePromoterProviding {
+  public static let shared: AccessoExperiencePromoter.ExperiencePromoterProvider
+  public var pushDeviceToken: Swift.String? {
+    get
+    set
+  }
+  public var beaconDetection: ((AccessoExperiencePromoter.BeaconRegion) -> Swift.Void)?
+  public var beaconListenerStatus: AccessoExperiencePromoter.BeaconListenerStatus
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updatePushDeviceToken(pushDeviceToken: Swift.String) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMessages(venueId: Swift.String? = nil) async throws -> [AccessoExperiencePromoter.Message]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func trackMessageAction(messageEvent: AccessoExperiencePromoter.MessageEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func trackMessageLinkTapped(messageLinkTappedEvent: AccessoExperiencePromoter.MessageLinkTappedEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func trackAppNotificationState(appNotificationStateEvent: AccessoExperiencePromoter.AppNotificationStateEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMessageById(messageId: Swift.String) async throws -> AccessoExperiencePromoter.Message
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func trackBeaconDetectChange(beaconStatus: AccessoExperiencePromoter.BeaconStatus, beaconEvent: AccessoExperiencePromoter.BeaconEvent) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getBeaconRegions() async throws -> [AccessoExperiencePromoter.BeaconRegion]
+  #endif
+  public func startListeningForBeaconRegions(beaconRegions: [AccessoExperiencePromoter.BeaconRegion])
+  public func stopListeningForBeaconRegions(beaconRegions: [AccessoExperiencePromoter.BeaconRegion]? = nil)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getPointsOfInterest() async throws -> [AccessoExperiencePromoter.PointOfInterest]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getDisplayCategories() async throws -> AccessoExperiencePromoter.DisplayCategories
+  #endif
+  public func searchPointsOfInterest(pointsOfInterest: [AccessoExperiencePromoter.PointOfInterest], searchCriteria: Swift.String) -> [AccessoExperiencePromoter.PointOfInterest]
+  public func filterPointsOfInterestByCategories(categories: [AccessoExperiencePromoter.Category], pointsOfInterest: [AccessoExperiencePromoter.PointOfInterest]) -> [AccessoExperiencePromoter.PointOfInterest]
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getEvents() async throws -> [AccessoExperiencePromoter.Event]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getEventSchedules() async throws -> [AccessoExperiencePromoter.Schedule]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getTrendingEvents() async throws -> [AccessoExperiencePromoter.Event]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getFeaturedEvents() async throws -> [AccessoExperiencePromoter.Event]
+  #endif
+  public func getEventById(eventId: Swift.String, events: [AccessoExperiencePromoter.Event]) -> AccessoExperiencePromoter.Event?
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getEventCategories() async throws -> [AccessoExperiencePromoter.EventCategory]
+  #endif
+  public func filterEventsByCategories(_ events: [AccessoExperiencePromoter.Event], categories: [AccessoExperiencePromoter.EventCategory]) -> [AccessoExperiencePromoter.Event]
+  public func filterEventsByDateRange(_ events: [AccessoExperiencePromoter.Event], interval: Foundation.DateInterval) -> [AccessoExperiencePromoter.Event]
+  @objc deinit
+}
+public struct CustomTabView : SwiftUI.View {
+  public var text: Swift.String
+  public var isSelected: Swift.Bool
+  public var action: () -> Swift.Void
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s25AccessoExperiencePromoter13CustomTabViewV4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor(unsafe) public struct EventDetailView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public let event: AccessoExperiencePromoter.Event
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s25AccessoExperiencePromoter15EventDetailViewV4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor(unsafe) public struct EventListView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s25AccessoExperiencePromoter13EventListViewV4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor(unsafe) public struct EventsTabBarView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var action: () -> Swift.Void
+  @_Concurrency.MainActor(unsafe) public var shouldSelectFirstTab: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var shouldSelectedFilterTab: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s25AccessoExperiencePromoter16EventsTabBarViewV4bodyQrvp", 0) __
+}
+extension AccessoExperiencePromoter.BeaconStatus : Swift.Equatable {}
+extension AccessoExperiencePromoter.BeaconStatus : Swift.Hashable {}
+extension AccessoExperiencePromoter.BeaconStatus : Swift.RawRepresentable {}
+extension AccessoExperiencePromoter.BeaconListenerStatus : Swift.Equatable {}
+extension AccessoExperiencePromoter.BeaconListenerStatus : Swift.Hashable {}
+extension AccessoExperiencePromoter.MessageEventType : Swift.Equatable {}
+extension AccessoExperiencePromoter.MessageEventType : Swift.Hashable {}
+extension AccessoExperiencePromoter.MessageEventType : Swift.RawRepresentable {}
+extension AccessoExperiencePromoter.MessageAction : Swift.Equatable {}
+extension AccessoExperiencePromoter.MessageAction : Swift.Hashable {}
+extension AccessoExperiencePromoter.MessageAction : Swift.RawRepresentable {}
+extension AccessoExperiencePromoter.AppNotificationState : Swift.Equatable {}
+extension AccessoExperiencePromoter.AppNotificationState : Swift.Hashable {}
+extension AccessoExperiencePromoter.AppNotificationState : Swift.RawRepresentable {}
+extension AccessoExperiencePromoter.Resolution : Swift.Equatable {}
+extension AccessoExperiencePromoter.Resolution : Swift.Hashable {}
+extension AccessoExperiencePromoter.Resolution : Swift.RawRepresentable {}
+extension AccessoExperiencePromoter.LayoutType : Swift.Equatable {}
+extension AccessoExperiencePromoter.LayoutType : Swift.Hashable {}
+extension AccessoExperiencePromoter.LayoutType : Swift.RawRepresentable {}
+extension AccessoExperiencePromoter.OperationalStatus : Swift.Equatable {}
+extension AccessoExperiencePromoter.OperationalStatus : Swift.Hashable {}
+extension AccessoExperiencePromoter.OperationalStatus : Swift.RawRepresentable {}
